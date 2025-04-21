@@ -6,19 +6,19 @@ import sutomoLogo from '../assets/sutomo.png';
 export default function Education() {
 	const schools = [
 		{
-			name: "Sutomo 1 Senior High School",
-			duration: "2019 – 2022",
-			degree: "Science Stream",
-			skills: ["Mathematics", "Logical Thinking", "Problem Solving", "Chemistry", "Physics", "Biology"],
-			logo: sutomoLogo
-		},
-		{
 			name: "National University of Singapore (NUS)",
 			duration: "2022 – Present",
 			degree: "Bachelor of Computing in Information Systems",
 			skills: ["Web Development", "Application Development", "Data Presentation", "Database Management", "UX/UI", "Solution Architecture", "Business Process Management", "Product Management"],
 			logo: nusLogo
 		},
+		{
+			name: "Sutomo 1 Senior High School",
+			duration: "2019 – 2022",
+			degree: "Science Stream",
+			skills: ["Mathematics", "Logical Thinking", "Problem Solving", "Chemistry", "Physics", "Biology"],
+			logo: sutomoLogo
+		}
 	];
 
 	return (

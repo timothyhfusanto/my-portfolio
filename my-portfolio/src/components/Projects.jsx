@@ -8,15 +8,15 @@ export default function Projects() {
     {
       name: "Chio - Beauty Lifestyle App",
     //   image: chioImg,
-      description: "A social-commerce mobile platform for the beauty & lifestyle industry. Users can book services, shop products, and interact through video content.",
-      stack: ["React Native", "Expo", "NestJS", "MongoDB", "Stripe", "Socket.IO"],
+      description: "A social-commerce mobile platform for the beauty & lifestyle industry.",
+      stack: ["React", "React Native", "Expo", "NestJS", "MongoDB", "Stripe", "Socket.IO", "Nivo", "Antd", "Tailwind CSS", "Gluestack UI", "Google Analytics 4"],
       link: "https://github.com/yourusername/chio", // or demo link
     },
     {
-      name: "ShelfServe - Hospital Inventory",
+      name: "OvalEvolution- Online Menu Ordering System",
     //   image: shelfserveImg,
-      description: "An inventory management system for healthcare institutions, enabling real-time stock monitoring and automated restocking.",
-      stack: ["React", "NestJS", "MongoDB", "Nivo", "PDFKit"],
+      description: "An online menu ordering system for restaurants to streamline their operations.",
+      stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "jQuery", "HTML", "CSS", "Blade"],
       link: "https://github.com/yourusername/shelfserve",
     },
   ];
@@ -29,7 +29,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-10 relative">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -45,12 +45,12 @@ export default function Projects() {
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-3">{project.description}</p>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.stack.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full"
+                    className="bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full transform-scale-100 hover:scale-105 transition duration-300 ease-in-out"
                   >
                     {tech}
                   </span>
@@ -61,7 +61,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-blue-500 hover:underline"
+                  className="inline-block text-blue-500 hover:underline" 
                 >
                   View Project →
                 </a>
