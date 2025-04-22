@@ -24,40 +24,49 @@ export default function Education() {
 	return (
 		<section
 			id="education"
-			className="bg-white dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6 p-8"
+			className="bg-white dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
 		>
 			<div className="max-w-5xl mx-auto text-center">
-				<h2 className="text-4xl font-bold mb-12">Education</h2>
+				<h2 className="text-4xl font-bold mb-16">Education</h2>
 
-				<div className="grid gap-10 md:grid-cols-2">
+				<div className="relative border-l-2 border-gray-300 dark:border-gray-700 ml-4">
 					{schools.map((school, index) => (
 						<motion.div
 							key={index}
-							className="p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 flex flex-col items-center"
+							className="relative mb-16 pl-8 ml-8"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ delay: index * 0.2, duration: 0.5 }}
 							viewport={{ once: true }}
 						>
-							<img
-								src={school.logo}
-								alt={`${school.name} logo`}
-								className="w-32 h-32 object-contain mb-4"
-							/>
+							{/* Dot marker */}
+							<div className="absolute left-[-12px] top-2 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-400 border-4 border-white dark:border-gray-950"></div>
 
-							<h3 className="text-2xl font-semibold mb-1">{school.name}</h3>
-							<p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{school.duration}</p>
-							<p className="text-md font-medium mb-3">{school.degree}</p>
+							<div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-6 rounded-xl shadow-md text-left">
+								<div className="flex items-center gap-4 mb-3">
+									<img
+										src={school.logo}
+										alt={`${school.name} logo`}
+										className="w-12 h-12 object-contain"
+									/>
+									<div>
+										<h3 className="text-xl font-semibold">{school.name}</h3>
+										<p className="text-sm text-gray-500 dark:text-gray-400">{school.duration}</p>
+									</div>
+								</div>
 
-							<div className="flex flex-wrap justify-center gap-2">
-								{school.skills.map((skill, i) => (
-									<span
-										key={i}
-										className="bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full transform-scale-100 hover:scale-105 transition duration-300 ease-in-out"
-									>
-										{skill}
-									</span>
-								))}
+								<p className="text-md font-medium mb-3">{school.degree}</p>
+
+								<div className="flex flex-wrap gap-2">
+									{school.skills.map((skill, i) => (
+										<span
+											key={i}
+											className="bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full"
+										>
+											{skill}
+										</span>
+									))}
+								</div>
 							</div>
 						</motion.div>
 					))}

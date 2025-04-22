@@ -1,20 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// import chioImg from '../assets/project-chio.png'; // Replace with your image
-// import shelfserveImg from '../assets/project-shelfserve.png'; // Replace with your image
-
+import chioImg from '../assets/chio.jpg';
+import ovalImg from '../assets/oval.png';
 export default function Projects() {
   const projects = [
     {
       name: "Chio - Beauty Lifestyle App",
-    //   image: chioImg,
+      image: chioImg,
       description: "A social-commerce mobile platform for the beauty & lifestyle industry.",
       stack: ["React", "React Native", "Expo", "NestJS", "MongoDB", "Stripe", "Socket.IO", "Nivo", "Antd", "Tailwind CSS", "Gluestack UI", "Google Analytics 4"],
-      link: "https://github.com/yourusername/chio", // or demo link
+      link: "https://github.com/yourusername/chio", 
     },
     {
-      name: "OvalEvolution- Online Menu Ordering System",
-    //   image: shelfserveImg,
+      name: "OvalEvolution - Online Menu Ordering System",
+      image: ovalImg,
       description: "An online menu ordering system for restaurants to streamline their operations.",
       stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "jQuery", "HTML", "CSS", "Blade"],
       link: "https://github.com/yourusername/shelfserve",
@@ -29,7 +28,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-10 relative">
+        <div className="grid md:grid-cols-3 gap-10 relative">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -42,7 +41,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-48 object-cover rounded-lg mb-4"
+                className="w-full h-48 object-cover rounded-lg mb-4 transform-scale-100 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
               />
               <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6">{project.description}</p>

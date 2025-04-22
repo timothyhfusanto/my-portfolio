@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-md transition-colors duration-300 fixed w-full top-0 z-50">
+    <header className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-md transition-colors duration-300 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-gray-900 dark:text-white">
 
         {/* Logo */}
