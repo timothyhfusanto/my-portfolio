@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'react-feather';
+import background from '../assets/background.jpg';
 
 export default function Hero() {
 	return (
 		<section 
 		id='home' 
 		className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300"
-		style={{backgroundImage: `url('/src/assets/background.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+		style={{backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
 		>
 			<div className="max-w-7xl mx-auto flex flex-col items-center justify-center w-full min-h-screen px-6 py-16 text-center">
 
