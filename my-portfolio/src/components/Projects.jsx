@@ -25,10 +25,10 @@ export default function Projects() {
       id="projects"
       className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
     >
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center  w-full min-h-screen px-6 justify-center items-center flex flex-col">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-3 gap-10 relative">
+        <div className="grid md:grid-cols-2 gap-20 relative">
           {projects.map((project, index) => (
             <motion.div
               key={index}

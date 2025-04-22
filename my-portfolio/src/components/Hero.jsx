@@ -30,7 +30,7 @@ export default function Hero() {
 				</motion.p>
 
 				<motion.a
-					href="#about"
+					href="#contact"
 					className="inline-block px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition text-2xl font-bold"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
