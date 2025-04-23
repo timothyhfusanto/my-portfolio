@@ -50,16 +50,30 @@ export default function ProjectDetails() {
   return (
     <section className="min-h-screen py-25 bg-white dark:bg-gray-950 text-gray-900 dark:text-white px-6 transition-colors duration-300">
       <div className="max-w-5xl mx-auto space-y-16 text-center items-center justify-center flex flex-col">
+
+        {/* Back Link */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="w-full text-left"
+        >
+          <button onClick={handleBack} className="inline-block text-blue-600 hover:underline text-sm">
+            ← Back to Projects
+          </button>
+        </motion.div>
+
+
         {/* Title & Description */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           viewport={{ once: true }}
-
         >
           <h1 className="text-4xl font-bold mb-4">{project.name}</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400">{project.description}</p>
+          <p className="text-lg text-gray-600 dark:text-gray-400">{project.fullDescription}</p>
         </motion.div>
 
         {/* Project Image */}
@@ -94,7 +108,7 @@ export default function ProjectDetails() {
                     <img
                       src={img}
                       alt={`Screenshot ${index + 1}`}
-                      className="object-cover rounded-lg shadow-md"
+                      className="object-cover rounded-3xl shadow-md"
                     />
                   </div>
                 </CarouselItem>
@@ -163,11 +177,9 @@ export default function ProjectDetails() {
           </a>
 
         </motion.div>
-
-        {/* Back Link */}
-        <button onClick={handleBack} className="inline-block text-blue-600 hover:underline mt-10 text-sm">
-          ← Back to Projects
-        </button>
+      </div>
+      <div className="mt-20 text-center text-sm text-gray-500 dark:text-gray-400">
+        © {new Date().getFullYear()} Timothy Fusanto. All rights reserved.
       </div>
     </section>
   );

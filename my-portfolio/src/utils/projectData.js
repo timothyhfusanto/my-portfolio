@@ -16,8 +16,8 @@ export const projects = [
 			chioImg2,
 			chioImg3,
 		],
-		description: "A social-commerce mobile platform for the beauty & lifestyle industry.",
-		stack: [
+		description: "A social-commerce mobile platform for the beauty and lifestyle industry.", 
+		fullDescription: "Chio is a social-commerce mobile platform tailored for the beauty and lifestyle industry. It uniquely combines social networking and e-commerce, enabling users to connect with beauty service providers and influencers. The platform features Stripe integration for secure, seamless service bookings, and real-time chat powered by Socket.IO to enhance user interaction. A seller dashboard equips providers with tools for managing orders, analytics, and reviews, while an admin portal offers advanced insights into user engagement and platform performance.",		stack: [
 			{ name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
 			{ name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
 			{ name: "Expo", logo: expoImg },
