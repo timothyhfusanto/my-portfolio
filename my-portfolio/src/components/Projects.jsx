@@ -9,9 +9,9 @@ export default function Projects() {
       id="projects"
       className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
     >
-      <div className="max-w-6xl mx-auto text-center  w-full min-h-screen px-6 justify-center items-center flex flex-col">
+      <div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
-        <div className="grid md:grid-cols-3 gap-10 relative">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 relative">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -31,9 +31,13 @@ export default function Projects() {
                 />
               </Link>
 
-              <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-6">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
+              <h3 className="text-2xl font-semibold mb-1">{project.name}</h3>
+              <p className="text-gray-500 dark:text-gray-300 mb-5">{project.description}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 justify-between flex">
+                <div className='bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full capitalize'>{project.category}</div>
+                <div>{project.date}</div>
+              </p>
+              {/* <div className="flex flex-wrap gap-2 mb-4">
                 {project.stack.map((tech, i) => (
                   <span
                     key={i}
@@ -42,8 +46,8 @@ export default function Projects() {
                     {tech.name}
                   </span>
                 ))}
-              </div>
-              {project.link && (
+              </div> */}
+              {/* {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
@@ -52,7 +56,7 @@ export default function Projects() {
                 >
                   View Project →
                 </a>
-              )}
+              )} */}
             </motion.div>
           ))}
         </div>

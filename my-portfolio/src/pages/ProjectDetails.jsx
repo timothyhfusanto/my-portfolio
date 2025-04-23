@@ -50,18 +50,27 @@ export default function ProjectDetails() {
 
   return (
     <section className="min-h-screen py-25 bg-white dark:bg-gray-950 text-gray-900 dark:text-white px-6 transition-colors duration-300">
-      <div className="max-w-5xl mx-auto space-y-16 text-center items-center justify-center flex flex-col">
-
+      <div className="max-w-5xl mx-auto space-y-16 text-center items-center justify-center flex flex-col ">
         {/* Back Link */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           viewport={{ once: true }}
-          className="w-full text-left"
+          className="w-full text-left justify-between flex mt-4"
         >
           <Button onClick={handleBack} variant='link' className="inline-block text-blue-600 hover:underline text-sm">
             ← Back to Projects
+          </Button>
+          <Button
+            onClick={() => {
+              window.open(project.link, '_blank');
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            className=""
+          >
+            View on GitHub ↗
           </Button>
         </motion.div>
 
@@ -114,7 +123,7 @@ export default function ProjectDetails() {
                   </div>
                 </CarouselItem>
               ))}
-              
+
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -162,23 +171,7 @@ export default function ProjectDetails() {
           </ul>
         </motion.div>
 
-        {/* GitHub Button */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition"
-          >
-            View on GitHub
-          </a>
 
-        </motion.div>
       </div>
       <div className="mt-20 text-center text-sm text-gray-500 dark:text-gray-400">
         © {new Date().getFullYear()} Timothy Fusanto. All rights reserved.

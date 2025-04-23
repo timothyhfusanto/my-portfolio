@@ -11,13 +11,14 @@ import paypalImg from '../assets/paypal.svg';
 export const projects = [
 	{
 		id: "chio",
-		name: "Chio - Beauty Lifestyle App",
+		name: "Chio",
 		images: [
 			chioImg,
 			chioImg2,
 			chioImg3,
 		],
-		description: "A social-commerce mobile platform for the beauty and lifestyle industry.",
+		// description: "A social-commerce mobile platform for the beauty and lifestyle industry.",
+		description: "Beauty Lifestyle App",
 		fullDescription: "Chio is a social-commerce mobile platform tailored for the beauty and lifestyle industry. It uniquely combines social networking and e-commerce, enabling users to connect with beauty service providers and influencers. The platform features Stripe integration for secure, seamless service bookings, and real-time chat powered by Socket.IO to enhance user interaction. A seller dashboard equips providers with tools for managing orders, analytics, and reviews, while an admin portal offers advanced insights into user engagement and platform performance.", stack: [
 			{ name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
 			{ name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -43,13 +44,15 @@ export const projects = [
 			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
 			"Automated email notifications for order confirmations and status updates.",
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
-		]
+		],
+		date: "Apr 2025",
+		category: "web & app / full-stack"
 	},
 	{
 		id: "skillswap",
-		name: "SkillSwap - Freelancer Marketplace",
+		name: "SkillSwap",
 		images: [skillswapImg],
-		description: "A marketplace for freelancers to trade their offered skills.",
+		description: "Freelancer marketplace",
 		fullDescription: "SkillSwap is a marketplace that enables freelancers to offer their services and trade skills with one another. Freelancers can list services for direct orders from regular users or offer them for skill-swapping with other freelancers. Like most commerce platforms, it includes features such as listing management, bookings, and reviews.",
 		stack: [
 			{
@@ -92,13 +95,15 @@ export const projects = [
 			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
 			"Automated email notifications for order confirmations and status updates.",
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
-		]
+		],
+		date: "Apr 2024",
+		category: "web / full-stack"
 	},
 	{
 		id: "ovalevolution",
-		name: "OvalEvolution - One-stop customer service system",
+		name: "Oval Evolution",
 		images: [ovalImg],
-		description: "An online menu ordering system for restaurants to streamline their operations.",
+		description: "One-stop customer service system",
 		fullDescription: "OvalEvolution is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
 		stack: [
 			{
@@ -149,6 +154,8 @@ export const projects = [
 			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
 			"Automated email notifications for order confirmations and status updates.",
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
-		]
+		],
+		date: "Aug 2023",
+		category: "web / full-stack"
 	},
 ];

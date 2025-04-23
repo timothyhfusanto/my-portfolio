@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Menu, X } from 'react-feather'; // or use Heroicons or any other icon lib
+import { Menu, X } from 'react-feather';
 
 const sections = ['home', 'about', 'education', 'projects', 'contact'];
 
