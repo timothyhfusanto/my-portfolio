@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
+import { Button } from '@/components/ui/button';
 
 
 export default function ProjectDetails() {
@@ -59,9 +60,9 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
           className="w-full text-left"
         >
-          <button onClick={handleBack} className="inline-block text-blue-600 hover:underline text-sm">
+          <Button onClick={handleBack} variant='link' className="inline-block text-blue-600 hover:underline text-sm">
             ← Back to Projects
-          </button>
+          </Button>
         </motion.div>
 
 

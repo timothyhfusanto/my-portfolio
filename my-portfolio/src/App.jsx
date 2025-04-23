@@ -6,28 +6,13 @@ import About from './components/About';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import ProjectDetails from './pages/ProjectDetails'; // 💡 create this file
+import ProjectDetails from './pages/ProjectDetails';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    const stored = localStorage.getItem('theme');
-    if (stored) return stored === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [darkMode]);
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div>
       <Toaster position="top-center" reverseOrder={false} />
       <Router>
         <Navbar />
