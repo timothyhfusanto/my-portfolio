@@ -91,6 +91,7 @@ export default function ProjectDetails() {
               align: "start",
               loop: true,
             }}
+            className="w-5/6 "
             setApi={setApi}
             plugins={[
               Autoplay({
