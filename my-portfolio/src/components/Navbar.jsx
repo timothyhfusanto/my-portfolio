@@ -26,7 +26,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-gray-900 dark:text-white">
 
         {/* Logo */}
-        <div className="text-2xl font-bold">Timothy</div>
+        <div className="text-2xl font-bold">
+          <a href='home'>Timothy</a>
+        </div>
 
         {/* Nav Links */}
         <nav className="space-x-6 text-sm font-medium hidden md:block">
@@ -34,11 +36,10 @@ export default function Navbar() {
             <a
               key={section}
               href={`#${section}`}
-              className={`transition ${
-                activeSection === section
+              className={`transition ${activeSection === section
                   ? 'text-blue-500 dark:text-yellow-400 font-semibold'
                   : 'hover:text-blue-500 dark:hover:text-yellow-400'
-              }`}
+                }`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>

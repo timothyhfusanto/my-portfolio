@@ -1,25 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import chioImg from '../assets/chio.jpg';
-import ovalImg from '../assets/oval.png';
-export default function Projects() {
-  const projects = [
-    {
-      name: "Chio - Beauty Lifestyle App",
-      image: chioImg,
-      description: "A social-commerce mobile platform for the beauty & lifestyle industry.",
-      stack: ["React", "React Native", "Expo", "NestJS", "MongoDB", "Stripe", "Socket.IO", "Nivo", "Antd", "Tailwind CSS", "Gluestack UI", "Google Analytics 4"],
-      link: "https://github.com/yourusername/chio", 
-    },
-    {
-      name: "OvalEvolution - Online Menu Ordering System",
-      image: ovalImg,
-      description: "An online menu ordering system for restaurants to streamline their operations.",
-      stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "jQuery", "HTML", "CSS", "Blade"],
-      link: "https://github.com/yourusername/shelfserve",
-    },
-  ];
+import { projects } from '../utils/projectData';
+import { Link } from 'react-router-dom';
 
+export default function Projects() {
   return (
     <section
       id="projects"
@@ -28,7 +12,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto text-center  w-full min-h-screen px-6 justify-center items-center flex flex-col">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-20 relative">
+        <div className="grid md:grid-cols-3 gap-20 relative">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -38,11 +22,16 @@ export default function Projects() {
               transition={{ delay: index * 0.2, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-48 object-cover rounded-lg mb-4 transform-scale-100 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
-              />
+              <Link
+                to={project.details} 
+              >
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-48 object-cover rounded-lg mb-4 transform-scale-100 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                />
+              </Link>
+
               <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -60,7 +49,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-blue-500 hover:underline" 
+                  className="inline-block text-blue-500 hover:underline"
                 >
                   View Project →
                 </a>
