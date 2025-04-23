@@ -33,10 +33,10 @@ export default function Projects() {
 
               <h3 className="text-2xl font-semibold mb-1">{project.name}</h3>
               <p className="text-gray-500 dark:text-gray-300 mb-5">{project.description}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 justify-between flex">
+              <div className="text-sm text-gray-500 dark:text-gray-400 justify-between flex">
                 <div className='bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full capitalize'>{project.category}</div>
                 <div>{project.date}</div>
-              </p>
+              </div>
               {/* <div className="flex flex-wrap gap-2 mb-4">
                 {project.stack.map((tech, i) => (
                   <span
