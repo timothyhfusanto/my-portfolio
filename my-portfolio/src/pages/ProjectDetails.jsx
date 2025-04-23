@@ -1,24 +1,26 @@
-import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '../utils/projectData';
 import { useNavigate } from 'react-router-dom';
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+
 
 export default function ProjectDetails() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
   const navigate = useNavigate();
-  const [sliderRef] = useKeenSlider({
-    loop: true,
-    mode: "free-snap", // or "snap" for strict behavior
-    slides: {
-      perView: 1.5, // show 1 full + half next slide
-      spacing: 16,  // space between slides (in px)
-    },
-  });
-
+  const [api, setApi] = useState(null);
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
   const handleBack = () => {
     navigate('/');
@@ -29,14 +31,24 @@ export default function ProjectDetails() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api]);
 
   if (!project) {
     return <div className="text-center mt-20 text-lg">Project not found 😢</div>;
   }
 
   return (
-    <section className="min-h-screen py-25 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 transition-colors duration-300">
+    <section className="min-h-screen py-25 bg-white dark:bg-gray-950 text-gray-900 dark:text-white px-6 transition-colors duration-300">
       <div className="max-w-5xl mx-auto space-y-16 text-center items-center justify-center flex flex-col">
         {/* Title & Description */}
         <motion.div
@@ -54,24 +66,45 @@ export default function ProjectDetails() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
           viewport={{ once: true }}
+          className='items-center justify-center flex flex-col w-full'
         >
           <h2 className="text-2xl font-semibold mb-4">Screenshots / Preview</h2>
-
-          <div ref={sliderRef} className="keen-slider overflow-visible">
-            {project.images.map((img, i) => (
-              <div
-                className="keen-slider__slide rounded-xl overflow-hidden relative shadow-md"
-                key={i}
-              >
-                <img
-                  src={img}
-                  alt={`Screenshot ${i + 1}`}
-                  className="w-full h-auto object-cover rounded-xl transition-opacity duration-300 hover:opacity-100 opacity-90"
-                />
-              </div>
-            ))}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className='w-3/4 h-3/4'
+            setApi={setApi}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+                pauseOnTouch: true,
+              }),
+            ]}
+          >
+            <CarouselContent>
+              {project.images.map((img, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <img
+                      src={img}
+                      alt={`Screenshot ${index + 1}`}
+                      className="object-cover rounded-lg shadow-md"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+          <div className="py-2 text-center text-xl text-muted-foreground">
+            {current} of {count}
           </div>
         </motion.div>
 

@@ -1,8 +1,11 @@
-import chioImg from '../assets/chio.png';
+import chioImg from '../assets/chio/chio.png';
+import chioImg2 from '../assets/chio/chio2.png';
+import chioImg3 from '../assets/chio/chio3.png';
 import ovalImg from '../assets/oval.png';
 import skillswapImg from '../assets/skillswap.png';
 import expoImg from '../assets/expo.svg';
 import stripeImg from '../assets/stripe.svg';
+
 
 export const projects = [
 	{
@@ -10,6 +13,8 @@ export const projects = [
 		name: "Chio - Beauty Lifestyle App",
 		images: [
 			chioImg,
+			chioImg2,
+			chioImg3,
 		],
 		description: "A social-commerce mobile platform for the beauty & lifestyle industry.",
 		stack: [
@@ -53,6 +58,16 @@ export const projects = [
 		],
 		link: "https://github.com/yourusername/shelfserve",
 		details: "/project/skillswap",
+		keyFeatures: [
+			"Algorithm-driven post recommendations for a personalized user experience.",
+			"User-friendly interface tailored to beauty and lifestyle content.",
+			"Follower system for connecting users with beauty service providers and influencers.",
+			"Seamless service booking and seller dashboard with order, analytics, and review management.",
+			"Real-time chat with automated welcome messages powered by WebSockets.",
+			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
+			"Automated email notifications for order confirmations and status updates.",
+			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+		]
 	},
 	{
 		id: "ovalevolution",
@@ -71,5 +86,15 @@ export const projects = [
 		],
 		link: "https://github.com/yourusername/shelfserve",
 		details: "/project/ovalevolution",
+		keyFeatures: [
+			"Algorithm-driven post recommendations for a personalized user experience.",
+			"User-friendly interface tailored to beauty and lifestyle content.",
+			"Follower system for connecting users with beauty service providers and influencers.",
+			"Seamless service booking and seller dashboard with order, analytics, and review management.",
+			"Real-time chat with automated welcome messages powered by WebSockets.",
+			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
+			"Automated email notifications for order confirmations and status updates.",
+			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+		]
 	},
 ];
