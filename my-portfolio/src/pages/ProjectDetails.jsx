@@ -91,7 +91,6 @@ export default function ProjectDetails() {
               align: "start",
               loop: true,
             }}
-            className='w-3/4 h-3/4'
             setApi={setApi}
             plugins={[
               Autoplay({
@@ -114,6 +113,7 @@ export default function ProjectDetails() {
                   </div>
                 </CarouselItem>
               ))}
+              
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
