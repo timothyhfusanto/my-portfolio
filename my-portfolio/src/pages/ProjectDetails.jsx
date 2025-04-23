@@ -118,7 +118,7 @@ export default function ProjectDetails() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-          <div className="py-2 text-center text-xl text-muted-foreground">
+          <div className="py-2 text-center text-lg text-muted-foreground">
             {current} of {count}
           </div>
         </motion.div>

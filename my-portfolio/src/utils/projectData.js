@@ -5,7 +5,8 @@ import ovalImg from '../assets/oval.png';
 import skillswapImg from '../assets/skillswap.png';
 import expoImg from '../assets/expo.svg';
 import stripeImg from '../assets/stripe.svg';
-
+import laravelImg from '../assets/laravel.svg';
+import paypalImg from '../assets/paypal.svg';
 
 export const projects = [
 	{
@@ -16,8 +17,8 @@ export const projects = [
 			chioImg2,
 			chioImg3,
 		],
-		description: "A social-commerce mobile platform for the beauty and lifestyle industry.", 
-		fullDescription: "Chio is a social-commerce mobile platform tailored for the beauty and lifestyle industry. It uniquely combines social networking and e-commerce, enabling users to connect with beauty service providers and influencers. The platform features Stripe integration for secure, seamless service bookings, and real-time chat powered by Socket.IO to enhance user interaction. A seller dashboard equips providers with tools for managing orders, analytics, and reviews, while an admin portal offers advanced insights into user engagement and platform performance.",		stack: [
+		description: "A social-commerce mobile platform for the beauty and lifestyle industry.",
+		fullDescription: "Chio is a social-commerce mobile platform tailored for the beauty and lifestyle industry. It uniquely combines social networking and e-commerce, enabling users to connect with beauty service providers and influencers. The platform features Stripe integration for secure, seamless service bookings, and real-time chat powered by Socket.IO to enhance user interaction. A seller dashboard equips providers with tools for managing orders, analytics, and reviews, while an admin portal offers advanced insights into user engagement and platform performance.", stack: [
 			{ name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
 			{ name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
 			{ name: "Expo", logo: expoImg },
@@ -49,12 +50,36 @@ export const projects = [
 		name: "SkillSwap - Freelancer Marketplace",
 		images: [skillswapImg],
 		description: "A marketplace for freelancers to trade their offered skills.",
+		fullDescription: "SkillSwap is a marketplace that enables freelancers to offer their services and trade skills with one another. Freelancers can list services for direct orders from regular users or offer them for skill-swapping with other freelancers. Like most commerce platforms, it includes features such as listing management, bookings, and reviews.",
 		stack: [
-			{ name: "Django", logo: "" },
-			{ name: "Python", logo: "" },
-			{ name: "MySQL", logo: "" },
-			{ name: "Bootstrap", logo: "" },
-			{ name: "jQuery", logo: "" },
+			{
+				name: "Django",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+			},
+			{
+				name: "Python",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+			},
+			{
+				name: "MySQL",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+			},
+			{
+				name: "Bootstrap",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+			},
+			{
+				name: "jQuery",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+			},
+			{
+				name: "HTML",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+			},
+			{
+				name: "CSS",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+			},
 		],
 		link: "https://github.com/yourusername/shelfserve",
 		details: "/project/skillswap",
@@ -71,18 +96,47 @@ export const projects = [
 	},
 	{
 		id: "ovalevolution",
-		name: "OvalEvolution - One-stop customer service platform",
+		name: "OvalEvolution - One-stop customer service system",
 		images: [ovalImg],
 		description: "An online menu ordering system for restaurants to streamline their operations.",
+		fullDescription: "OvalEvolution is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
 		stack: [
-			{ name: "Laravel", logo: "" },
-			{ name: "PHP", logo: "" },
-			{ name: "MySQL", logo: "" },
-			{ name: "Bootstrap", logo: "" },
-			{ name: "jQuery", logo: "" },
-			{ name: "HTML", logo: "" },
-			{ name: "CSS", logo: "" },
-			{ name: "Blade", logo: "" },
+			{
+				name: "Laravel",
+				logo: laravelImg,
+			},
+			{
+				name: "PHP",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+			},
+			{
+				name: "Blade",
+				logo: "https://blade-ui-kit.com/images/icon.svg",
+			},
+			{
+				name: "MySQL",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+			},
+			{
+				name: "Bootstrap",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+			},
+			{
+				name: "jQuery",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+			},
+			{
+				name: "HTML",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+			},
+			{
+				name: "CSS",
+				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+			},
+			{
+				name: "PayPal",
+				logo: paypalImg,
+			}
 		],
 		link: "https://github.com/yourusername/shelfserve",
 		details: "/project/ovalevolution",
