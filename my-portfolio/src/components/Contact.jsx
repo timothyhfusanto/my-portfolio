@@ -1,10 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 
 export default function Contact() {
 	const form = useRef();
+
+	useEffect(() => {
+		emailjs.init(import.meta.env.VITE_PUBLIC_KEY);
+	}, []);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -13,14 +17,19 @@ export default function Contact() {
 
 		emailjs
 			.sendForm(
-				process.env.SERVICE_ID,
-				process.env.TEMPLATE_ID,
+				import.meta.env.VITE_SERVICE_ID,
+				import.meta.env.VITE_TEMPLATE_ID,
 				form.current,
-				process.env.PUBLIC_KEY,
 			)
 			.then(
 				(result) => {
-					toast.success("Message sent successfully!", { id: loadingToast });
+					toast.success(
+						<div>
+							<p className="font-semibold">Message sent successfully!</p>
+							<p className="text-sm text-gray-500 dark:text-gray-400">I'll get back to you via email.</p>
+						</div>,
+						{ id: loadingToast }
+					);
 					form.current.reset();
 				},
 				(error) => {

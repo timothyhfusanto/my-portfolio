@@ -5,10 +5,10 @@ import background from '../assets/background.jpg';
 
 export default function Hero() {
 	return (
-		<section 
-		id='home' 
-		className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300"
-		style={{backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+		<section
+			id='home'
+			className="bg-gray-50 text-gray-50 dark:bg-gray-900 transition-colors duration-300"
+			style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
 		>
 			<div className="max-w-7xl mx-auto flex flex-col items-center justify-center w-full min-h-screen px-6 py-16 text-center">
 
@@ -22,7 +22,7 @@ export default function Hero() {
 				</motion.h1>
 
 				<motion.p
-					className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-md "
+					className="text-lg text-gray- dark:text-gray-300 mb-10 max-w-md "
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.2, duration: 0.6 }}
