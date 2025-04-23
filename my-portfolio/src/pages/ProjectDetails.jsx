@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '../utils/projectData';
 import { useNavigate } from 'react-router-dom';
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 export default function ProjectDetails() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
   const navigate = useNavigate();
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    mode: "free-snap", // or "snap" for strict behavior
+    slides: {
+      perView: 1.5, // show 1 full + half next slide
+      spacing: 16,  // space between slides (in px)
+    },
+  });
+
 
   const handleBack = () => {
     navigate('/');
@@ -16,60 +27,98 @@ export default function ProjectDetails() {
     }, 100);
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   if (!project) {
     return <div className="text-center mt-20 text-lg">Project not found 😢</div>;
   }
 
   return (
-    <section className="min-h-screen py-20 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 transition-colors duration-300">
-      <div className="max-w-5xl mx-auto space-y-16">
+    <section className="min-h-screen py-25 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 transition-colors duration-300">
+      <div className="max-w-5xl mx-auto space-y-16 text-center items-center justify-center flex flex-col">
         {/* Title & Description */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+
         >
           <h1 className="text-4xl font-bold mb-4">{project.name}</h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">{project.description}</p>
         </motion.div>
 
-        {/* Tech Stack */}
+        {/* Project Image */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-semibold mb-2">Tech Stack</h2>
-          <div className="flex flex-wrap gap-3">
-            {project.stack.map((tech, i) => (
-              <span key={i} className="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-white text-sm font-medium px-4 py-1 rounded-full">
-                {tech}
-              </span>
+          <h2 className="text-2xl font-semibold mb-4">Screenshots / Preview</h2>
+
+          <div ref={sliderRef} className="keen-slider overflow-visible">
+            {project.images.map((img, i) => (
+              <div
+                className="keen-slider__slide rounded-xl overflow-hidden relative shadow-md"
+                key={i}
+              >
+                <img
+                  src={img}
+                  alt={`Screenshot ${i + 1}`}
+                  className="w-full h-auto object-cover rounded-xl transition-opacity duration-300 hover:opacity-100 opacity-90"
+                />
+              </div>
             ))}
           </div>
         </motion.div>
 
-        {/* Screenshots */}
+        {/* Tech Stack */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-left w-full"
         >
-          <h2 className="text-2xl font-semibold mb-4">Screenshots / Preview</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img
-              src={project.image}
-              alt="Screenshot"
-              className="rounded-lg shadow-md object-cover w-full"
-            />
+          <h2 className="text-2xl font-semibold mb-2">Tech Stack</h2>
+          <div className="flex flex-wrap gap-3">
+            {project.stack.map((tech, i) => (
+              <div key={i} className="bg-blue-100 dark:text-white flex items-center text-blue-800 dark:bg-blue-800 gap-2 px-4 py-2 rounded-lg shadow-sm transform-scale-100 hover:scale-105 transition duration-300 ease-in-out">
+                <img src={tech.logo} alt={tech.name} className="w-5 h-5" />
+                <span className="text-sm font-medium text-gray-800 dark:text-white">{tech.name}</span>
+              </div>
+            ))}
           </div>
+        </motion.div>
+
+        {/* Key Features */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.22, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-left w-full"
+        >
+          <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
+          <ul className="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+            {project.keyFeatures.map((feature, i) => (
+              <li key={i} className="flex items-start">
+                <span className="text-blue-600 dark:text-blue-400 mr-2">•</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
         </motion.div>
 
         {/* GitHub Button */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
         >
           <a
             href={project.github}
@@ -79,6 +128,7 @@ export default function ProjectDetails() {
           >
             View on GitHub
           </a>
+
         </motion.div>
 
         {/* Back Link */}

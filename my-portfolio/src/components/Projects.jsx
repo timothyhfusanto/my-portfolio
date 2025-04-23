@@ -11,8 +11,7 @@ export default function Projects() {
     >
       <div className="max-w-6xl mx-auto text-center  w-full min-h-screen px-6 justify-center items-center flex flex-col">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
-
-        <div className="grid md:grid-cols-3 gap-20 relative">
+        <div className="grid md:grid-cols-3 gap-10 relative">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -23,10 +22,10 @@ export default function Projects() {
               viewport={{ once: true }}
             >
               <Link
-                to={project.details} 
+                to={project.details}
               >
                 <img
-                  src={project.image}
+                  src={project.images[0]}
                   alt={project.name}
                   className="w-full h-48 object-cover rounded-lg mb-4 transform-scale-100 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
                 />
@@ -40,7 +39,7 @@ export default function Projects() {
                     key={i}
                     className="bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full transform-scale-100 hover:scale-105 transition duration-300 ease-in-out"
                   >
-                    {tech}
+                    {tech.name}
                   </span>
                 ))}
               </div>
