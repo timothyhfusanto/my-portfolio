@@ -2,10 +2,19 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '../utils/projectData';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProjectDetails() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   if (!project) {
     return <div className="text-center mt-20 text-lg">Project not found 😢</div>;
@@ -73,12 +82,9 @@ export default function ProjectDetails() {
         </motion.div>
 
         {/* Back Link */}
-        <Link
-          to="/"
-          className="text-blue-600 dark:text-blue-400 text-sm hover:underline block mt-10"
-        >
+        <button onClick={handleBack} className="inline-block text-blue-600 hover:underline mt-10 text-sm">
           ← Back to Projects
-        </Link>
+        </button>
       </div>
     </section>
   );
