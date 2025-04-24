@@ -43,7 +43,7 @@ export const projects = [
 			{ name: "Elasticsearch", logo: elasticImg }
 		],
 		link: {
-			github: "https://github.com/jarenl0ke/chio",
+			github: "https://github.com/timothyhfusanto/chio",
 			report: "https://docs.google.com/document/d/1p5DQMJoO1vDtNUyiuoFPO22TEJq3y4JUgm0NoxRaIf4/edit?usp=sharing",
 			slides: "",
 			figma: "https://www.figma.com/design/cfw3srLs423nmbMnTpS1Ov/Chio.?node-id=975-9028&t=1pxdBvX0OzshEfse-1",
