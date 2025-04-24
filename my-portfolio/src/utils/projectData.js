@@ -59,7 +59,7 @@ export const projects = [
 			"Automated email notifications for order confirmations and status updates.",
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
 		],
-		date: "Apr 2025",
+		date: "Jan - Apr 2025",
 		category: "Mobile app & web / full-stack"
 	},
 	{
@@ -114,7 +114,7 @@ export const projects = [
 			"Automated email notifications for order confirmations and status updates.",
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
 		],
-		date: "Apr 2024",
+		date: "Feb - Apr 2024",
 		category: "web / full-stack"
 	},
 	{
@@ -177,7 +177,7 @@ export const projects = [
 			"Automated email notifications for order confirmations and status updates.",
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
 		],
-		date: "Aug 2023",
+		date: "May - Aug 2023",
 		category: "web / full-stack"
 	},
 ];

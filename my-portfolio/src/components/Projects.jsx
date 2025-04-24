@@ -31,11 +31,14 @@ export default function Projects() {
                 />
               </Link>
 
-              <h3 className="text-2xl font-semibold mb-1">{project.name}</h3>
+              <div className="text-sm  justify-between flex items-center">
+                <h3 className="text-2xl font-semibold mb-1">{project.name}</h3>
+                <div className='text-gray-500 dark:text-gray-400'>{project.date}</div>
+              </div>
+              {/* <h3 className="text-2xl font-semibold mb-1">{project.name}</h3> */}
               <p className="text-gray-500 dark:text-gray-300 mb-5">{project.description}</p>
               <div className="text-sm text-gray-500 dark:text-gray-400 justify-between flex">
                 <div className='bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full capitalize'>{project.category}</div>
-                <div>{project.date}</div>
               </div>
               {/* <div className="flex flex-wrap gap-2 mb-4">
                 {project.stack.map((tech, i) => (
