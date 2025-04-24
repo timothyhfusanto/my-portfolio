@@ -112,8 +112,8 @@ export default function Contact() {
 						<div className="space-y-4">
 							<div>
 								<p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-								<a href="mailto:timothyfusanto@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-									timothyfusanto@gmail.com
+								<a href="mailto:timothyfusanto@u.nus.edu" className="text-blue-600 dark:text-blue-400 hover:underline">
+									timothyfusanto@u.nus.edu
 								</a>
 							</div>
 
