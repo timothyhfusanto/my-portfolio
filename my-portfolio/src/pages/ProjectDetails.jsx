@@ -187,7 +187,7 @@ export default function ProjectDetails() {
             setApi={setApi}
             plugins={[
               Autoplay({
-                delay: 6000,
+                delay: 5000,
                 stopOnInteraction: false,
                 stopOnMouseEnter: true,
                 pauseOnTouch: true,
