@@ -1,12 +1,17 @@
 import chioImg from '../assets/chio/chio.png';
 import chioImg2 from '../assets/chio/chio2.png';
 import chioImg3 from '../assets/chio/chio3.png';
+import chioImg4 from '../assets/chio/chio4.png';
+import chioImg5 from '../assets/chio/chio5.png';
 import ovalImg from '../assets/oval.png';
 import skillswapImg from '../assets/skillswap.png';
 import expoImg from '../assets/expo.svg';
 import stripeImg from '../assets/stripe.svg';
 import laravelImg from '../assets/laravel.svg';
 import paypalImg from '../assets/paypal.svg';
+import sendgridImg from '../assets/sendgrid.svg';
+import awsImg from '../assets/aws.svg';
+import elasticImg from '../assets/elastic.svg';
 
 export const projects = [
 	{
@@ -16,8 +21,9 @@ export const projects = [
 			chioImg,
 			chioImg2,
 			chioImg3,
+			chioImg4,
+			chioImg5
 		],
-		// description: "A social-commerce mobile platform for the beauty and lifestyle industry.",
 		description: "Beauty Lifestyle App",
 		fullDescription: "Chio is a social-commerce mobile platform tailored for the beauty and lifestyle industry. It uniquely combines social networking and e-commerce, enabling users to connect with beauty service providers and influencers. The platform features Stripe integration for secure, seamless service bookings, and real-time chat powered by Socket.IO to enhance user interaction. A seller dashboard equips providers with tools for managing orders, analytics, and reviews, while an admin portal offers advanced insights into user engagement and platform performance.", stack: [
 			{ name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -32,6 +38,9 @@ export const projects = [
 			{ name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
 			{ name: "Gluestack UI", logo: "https://gluestack.io/icon/logo/gluestack/brandLogo.svg" },
 			{ name: "Google Analytics 4", logo: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" },
+			{ name: "SendGrid", logo: sendgridImg },
+			{ name: "AWS S3", logo: awsImg },
+			{ name: "Elasticsearch", logo: elasticImg }
 		],
 		link: {
 			github: "https://github.com/jarenl0ke/chio",
@@ -51,7 +60,7 @@ export const projects = [
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
 		],
 		date: "Apr 2025",
-		category: "web & app / full-stack"
+		category: "Mobile app & web / full-stack"
 	},
 	{
 		id: "skillswap",
