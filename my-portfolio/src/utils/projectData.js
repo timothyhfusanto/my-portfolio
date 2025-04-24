@@ -33,7 +33,12 @@ export const projects = [
 			{ name: "Gluestack UI", logo: "https://gluestack.io/icon/logo/gluestack/brandLogo.svg" },
 			{ name: "Google Analytics 4", logo: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" },
 		],
-		link: "https://github.com/yourusername/chio",
+		link: {
+			github: "https://github.com/jarenl0ke/chio",
+			report: "https://docs.google.com/document/d/1p5DQMJoO1vDtNUyiuoFPO22TEJq3y4JUgm0NoxRaIf4/edit?usp=sharing",
+			slides: "",
+			figma: "https://www.figma.com/design/cfw3srLs423nmbMnTpS1Ov/Chio.?node-id=975-9028&t=1pxdBvX0OzshEfse-1",
+		},
 		details: "/project/chio",
 		keyFeatures: [
 			"Algorithm-driven post recommendations for a personalized user experience.",
@@ -84,7 +89,11 @@ export const projects = [
 				logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
 			},
 		],
-		link: "https://github.com/yourusername/shelfserve",
+		link: {
+			github: "https://github.com/jarenl0ke/chio",
+			report: "",
+			slides: ""
+		},
 		details: "/project/skillswap",
 		keyFeatures: [
 			"Algorithm-driven post recommendations for a personalized user experience.",
@@ -143,7 +152,11 @@ export const projects = [
 				logo: paypalImg,
 			}
 		],
-		link: "https://github.com/yourusername/shelfserve",
+		link: {
+			github: "https://github.com/jarenl0ke/chio",
+			report: "",
+			slides: ""
+		}, 
 		details: "/project/ovalevolution",
 		keyFeatures: [
 			"Algorithm-driven post recommendations for a personalized user experience.",

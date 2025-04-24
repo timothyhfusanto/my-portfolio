@@ -13,6 +13,41 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import { Button } from '@/components/ui/button';
+import {
+  ChevronDown,
+  Cloud,
+  CreditCard,
+  Github,
+  Keyboard,
+  LifeBuoy,
+  Link,
+  LogOut,
+  Mail,
+  MessageSquare,
+  Plus,
+  PlusCircle,
+  Presentation,
+  Settings,
+  User,
+  UserPlus,
+  Users,
+} from "lucide-react"
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ExternalLink, Figma, FileText, Paperclip } from 'react-feather';
 
 
 export default function ProjectDetails() {
@@ -62,18 +97,66 @@ export default function ProjectDetails() {
           <Button onClick={handleBack} variant='link' className="inline-block text-blue-600 hover:underline text-sm">
             ← Back to Projects
           </Button>
-          <Button
-            onClick={() => {
-              window.open(project.link, '_blank');
-            }}
-            target="_blank"
-            rel="noopener noreferrer"
-            className=""
-          >
-            View on GitHub ↗
-          </Button>
-        </motion.div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button>View Project <ChevronDown /></Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
+              {project.link.github && (
+                <DropdownMenuItem
+                  onClick={() => window.open(project.link.github, "_blank")}
+                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                >
+                  <Github className="w-4 h-4 text-black dark:text-white" />
+                  <span>GitHub</span>
+                  <DropdownMenuShortcut>
+                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                  </DropdownMenuShortcut>
+                </DropdownMenuItem>
+              )}
 
+              {project.link.report && (
+                <DropdownMenuItem
+                  onClick={() => window.open(project.link.report, "_blank")}
+                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                >
+                  <FileText className="w-4 h-4 text-black dark:text-white" />
+                  <span>Report</span>
+                  <DropdownMenuShortcut>
+                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                  </DropdownMenuShortcut>
+                </DropdownMenuItem>
+              )}
+
+              {project.link.slides && (
+                <DropdownMenuItem
+                  onClick={() => window.open(project.link.slides, "_blank")}
+                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                >
+                  <Presentation className="w-4 h-4 text-black dark:text-white" />
+                  <span>Slide deck</span>
+                  <DropdownMenuShortcut>
+                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                  </DropdownMenuShortcut>
+                </DropdownMenuItem>
+              )}
+
+              {project.link.figma && (
+                <DropdownMenuItem
+                  onClick={() => window.open(project.link.figma, "_blank")}
+                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                >
+                  <Figma className="w-4 h-4 text-black dark:text-white" />
+                  <span>Figma</span>
+                  <DropdownMenuShortcut>
+                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                  </DropdownMenuShortcut>
+                </DropdownMenuItem>
+              )}
+
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </motion.div>
 
         {/* Title & Description */}
         <motion.div
