@@ -108,16 +108,18 @@ export default function ProjectDetails() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           viewport={{ once: true }}
-          className="w-full text-left justify-between flex mt-4"
+          className="w-full justify-between flex mt-4"
         >
           <Button onClick={handleBack} variant='link' className="inline-block text-blue-600 hover:underline text-sm">
             ← Back to Projects
           </Button>
-          <div className='space-x-4 space-y-4'>
+          <div className='md:space-x-4 space-y-4 text-right'>
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant='outline'>View Project <ChevronDown /></Button>
-              </DropdownMenuTrigger>
+              {(project.link.github || project.link.report || project.link.slides) && (
+                <DropdownMenuTrigger asChild>
+                  <Button variant='outline'>View Project <ChevronDown /></Button>
+                </DropdownMenuTrigger>
+              )}
               <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
                 {project.link.github && (
                   <DropdownMenuItem
@@ -189,6 +191,9 @@ export default function ProjectDetails() {
                             ? <UserCog className="w-4 h-4 text-black dark:text-white" />
                             : <Smartphone className="w-4 h-4 text-black dark:text-white" />}
                           <span>{site.name}</span>
+                          <DropdownMenuShortcut>
+                            <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                          </DropdownMenuShortcut>
                         </DropdownMenuItem>
                       </DialogTrigger>
                     ))}
@@ -226,7 +231,7 @@ export default function ProjectDetails() {
                         }
                       }}
                     >
-                      {openDialog === 'Chio Admin' ? 'Go to Admin Site' : 'View Github'} <ExternalLink />
+                      {openDialog === 'Chio Admin' ? 'Go to Chio Admin' : 'View Github'} <ExternalLink />
                     </Button>
                   </DialogFooter>
                 </DialogContent>
@@ -303,7 +308,7 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
           className="text-left w-full"
         >
-          <h2 className="text-2xl font-semibold mb-4">{project.type}Tech Stack</h2>
+          <h2 className="text-2xl font-semibold mb-4">{project.type === "app" ? "Tech Stack" : "Product Skills"}</h2>
           <div className="flex flex-wrap gap-3">
             {project.stack.map((tech, i) => (
               <div key={i} className="bg-blue-100 dark:text-white flex items-center text-blue-800 dark:bg-blue-800 gap-2 px-4 py-2 rounded-lg shadow-sm transform-scale-100 hover:scale-105 transition duration-300 ease-in-out">
@@ -324,7 +329,7 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
           className="text-left w-full"
         >
-          <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
+          <h2 className="text-2xl font-semibold mb-4">{project.type === "app" ? "Key Features" : "Key Highlights"}</h2>
           <ul className="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300 text-base leading-relaxed">
             {project.keyFeatures.map((feature, i) => (
               <li key={i} className="flex items-start">

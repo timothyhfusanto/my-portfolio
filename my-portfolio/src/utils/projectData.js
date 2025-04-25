@@ -15,11 +15,15 @@ import awsImg from '../assets/tech-logo/aws.svg';
 import elasticImg from '../assets/tech-logo/elastic.svg';
 import chioqrImg from '../assets/chio/qrcode.png';
 import javaImg from "../assets/tech-logo/java.svg"
+import smartsgImg from "../assets/smartsg/smartsg1.png";
+import merlionImg from "../assets/merlion/merlion1.png";
+import shelfserveImg from "../assets/shelfserve/shelfserve1.png";
 
 const notSorted = [
 	{
 		id: "chio",
 		name: "Chio",
+		type: "app",
 		images: [
 			chioImg,
 			chioImg2,
@@ -68,12 +72,12 @@ const notSorted = [
 		sites: [
 			{ name: "Chio", link: "https://github.com/timothyhfusanto/chio" },
 			{ name: "Chio Admin", link: "https://chio-admin-timothyhfusantos-projects.vercel.app/", qr: chioqrImg },
-
 		]
 	},
 	{
 		id: "skillswap",
 		name: "SkillSwap",
+		type: "app",
 		images: [skillswapImg],
 		description: "Freelancer marketplace",
 		fullDescription: "SkillSwap is a marketplace that enables freelancers to offer their services and trade skills with one another. Freelancers can list services for direct orders from regular users or offer them for skill-swapping with other freelancers. Like most commerce platforms, it includes features such as listing management, bookings, and reviews.",
@@ -108,20 +112,13 @@ const notSorted = [
 			},
 		],
 		link: {
-			github: "https://github.com/jarenl0ke/chio",
+			github: "",
 			report: "",
 			slides: ""
 		},
 		details: "/project/skillswap",
 		keyFeatures: [
-			"Algorithm-driven post recommendations for a personalized user experience.",
-			"User-friendly interface tailored to beauty and lifestyle content.",
-			"Follower system for connecting users with beauty service providers and influencers.",
-			"Seamless service booking and seller dashboard with order, analytics, and review management.",
-			"Real-time chat with automated welcome messages powered by WebSockets.",
-			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
-			"Automated email notifications for order confirmations and status updates.",
-			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+			
 		],
 		date: "Feb - Apr 2024",
 		category: "web / full-stack",
@@ -131,6 +128,7 @@ const notSorted = [
 	{
 		id: "ovalevolution",
 		name: "Oval Evolution",
+		type: "app",
 		images: [ovalImg],
 		description: "One-stop customer service system",
 		fullDescription: "OvalEvolution is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
@@ -173,20 +171,13 @@ const notSorted = [
 			}
 		],
 		link: {
-			github: "https://github.com/jarenl0ke/chio",
+			github: "",
 			report: "",
 			slides: ""
 		},
 		details: "/project/ovalevolution",
 		keyFeatures: [
-			"Algorithm-driven post recommendations for a personalized user experience.",
-			"User-friendly interface tailored to beauty and lifestyle content.",
-			"Follower system for connecting users with beauty service providers and influencers.",
-			"Seamless service booking and seller dashboard with order, analytics, and review management.",
-			"Real-time chat with automated welcome messages powered by WebSockets.",
-			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
-			"Automated email notifications for order confirmations and status updates.",
-			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+			
 		],
 		date: "May - Aug 2023",
 		category: "web / full-stack",
@@ -197,36 +188,32 @@ const notSorted = [
 	{
 		id: "smartfurnituresg",
 		name: "Smart Furniture SG",
-		images: [ovalImg],
+		type: "product",
+		images: [smartsgImg],
 		description: "Furniture e-commerce platform",
-		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
+		fullDescription: "Smart Furniture SG is a furniture e-commerce platform designed to offer a wide range of furniture products. The project focused heavily on system design, involving the evaluation and planning of key features to be included in the application. It encompassed the development of UML diagrams such as use case diagrams, class diagrams, and sequence diagrams, alongside the definition of detailed business requirements for each application feature — serving as a critical planning phase before development. The platform supports three user roles: users, sellers, and admins. Users can browse and purchase furniture; sellers manage their shops and utilize promotional tools such as live streaming and ad purchases; while admins oversee system operations and daily platform management.",
 		stack: [
 			{ name: "Requirement Analysis" },
+			{ name: "Product Development Planning" },
+			{ name: "Feature Prioritization" },
 			{ name: "Use Case Modeling" },
 			{ name: "UML Design" },
 			{ name: "Entity-Relationship Modeling (ERD)" },
 			{ name: "System Architecture" },
+			{ name: "Business Requirements Documentation" },
 			{ name: "Wireframes" },
-			{ name: "Prototyping" },
 			{ name: "UI/UX Design" },
 			{ name: "Technical Documentation" },
 			{ name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
 		],
 		link: {
-			github: "https://github.com/jarenl0ke/chio",
+			github: "",
 			report: "",
 			slides: ""
 		},
 		details: "/project/smartfurnituresg",
 		keyFeatures: [
-			"Algorithm-driven post recommendations for a personalized user experience.",
-			"User-friendly interface tailored to beauty and lifestyle content.",
-			"Follower system for connecting users with beauty service providers and influencers.",
-			"Seamless service booking and seller dashboard with order, analytics, and review management.",
-			"Real-time chat with automated welcome messages powered by WebSockets.",
-			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
-			"Automated email notifications for order confirmations and status updates.",
-			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+
 		],
 		date: "Aug - Nov 2023",
 		category: "Product / System Design",
@@ -237,28 +224,22 @@ const notSorted = [
 	{
 		id: "merlionairline",
 		name: "Merlion Airline",
-		images: [ovalImg],
+		type: "app",
+		images: [merlionImg],
 		description: "Flight reservation system",
-		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
+		fullDescription: "Merlion Airline is a comprehensive backend flight reservation system that allows users to search for flights, book tickets, and manage their reservations. The system supports two user roles: bookers and airline staff. Staff members can manage flight schedules, while bookers can search for available flights and make reservations. Designed to simulate real-world airline operations, the system supports returning and direct flights, multiple seat classes, dynamic pricing, different aircraft types, multiple airlines, seat selection, and mock payment history. Staff members can also create new aircraft, define aircraft types, configure available seat classes, set class-specific pricing, and manage full flight schedules. Built with extensibility and scalability in mind, the system is structured to support future enhancements and additional feature development.",
 		stack: [
 			{ name: "Java EE", logo: javaImg },
 			{ name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
 		],
 		link: {
-			github: "https://github.com/jarenl0ke/chio",
+			github: "",
 			report: "",
 			slides: ""
 		},
 		details: "/project/merlionairline",
 		keyFeatures: [
-			"Algorithm-driven post recommendations for a personalized user experience.",
-			"User-friendly interface tailored to beauty and lifestyle content.",
-			"Follower system for connecting users with beauty service providers and influencers.",
-			"Seamless service booking and seller dashboard with order, analytics, and review management.",
-			"Real-time chat with automated welcome messages powered by WebSockets.",
-			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
-			"Automated email notifications for order confirmations and status updates.",
-			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+
 		],
 		date: "Aug - Nov 2023",
 		category: "Backend Development",
@@ -269,9 +250,10 @@ const notSorted = [
 	{
 		id: "shelfserve",
 		name: "ShelfServe",
-		images: [ovalImg],
+		type: "product",
+		images: [shelfserveImg],
 		description: "Inventory management product for healthcare",
-		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
+		fullDescription: "ShelfServe is a smart weight sensor system designed to help healthcare professionals manage inventory with real-time stock monitoring and automated threshold alerts. It features a user-friendly software interface that enables easy access to actionable data, empowering healthcare teams to make informed, timely inventory decisions.",
 		stack: [
 			{ name: "Product Requirements Gathering" },
 			{ name: "Product Management" },
@@ -294,18 +276,18 @@ const notSorted = [
 		link: {
 			report: "https://docs.google.com/document/d/1Ujh0TMP2kdQJwXth5fpYJKnQuHh7_1JbP8xxQmGkQSI/edit?usp=sharing",
 			slides: "https://www.canva.com/design/DAGlqmDNBwQ/muSJvduGinTJ6CE7N-Ok6g/edit?utm_content=DAGlqmDNBwQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-			figma : "https://www.figma.com/design/zYntj5xq1fAlKUv0jN3R23/IS4262-Wireframes?node-id=19-63&t=PB1e5irZ2trqnm3v-1"
+			figma: "https://www.figma.com/design/zYntj5xq1fAlKUv0jN3R23/IS4262-Wireframes?node-id=19-63&t=PB1e5irZ2trqnm3v-1"
 		},
 		details: "/project/shelfserve",
 		keyFeatures: [
-			"Algorithm-driven post recommendations for a personalized user experience.",
-			"User-friendly interface tailored to beauty and lifestyle content.",
-			"Follower system for connecting users with beauty service providers and influencers.",
-			"Seamless service booking and seller dashboard with order, analytics, and review management.",
-			"Real-time chat with automated welcome messages powered by WebSockets.",
-			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
-			"Automated email notifications for order confirmations and status updates.",
-			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+			"Identified a critical inventory management problem in healthcare through stakeholder interviews.",
+			"Designed a scalable hardware-software solution using weight sensors for real-time stock monitoring.",
+			"Developed a business model including projected breakeven analysis by Q3 2026.",
+			"Conducted market research and competitor analysis to position ShelfServe against RFID alternatives.",
+			"Created a product roadmap and milestone planning for a 12-month pilot and rollout strategy.",
+			"Forecasted revenue growth leading to a projected $36 million revenue by 2030.",
+			"Drafted user journey flows and wireframes for the management dashboard using Figma.",
+			"Formulated a go-to-market strategy targeting mid-sized hospitals and clinics initially."
 		],
 		date: "Jan - Apr 2025",
 		category: "Product",
