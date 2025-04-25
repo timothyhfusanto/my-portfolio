@@ -3,6 +3,7 @@ import chioImg2 from '../assets/chio/chio2.png';
 import chioImg3 from '../assets/chio/chio3.png';
 import chioImg4 from '../assets/chio/chio4.png';
 import chioImg5 from '../assets/chio/chio5.png';
+import chioImg6 from '../assets/chio/chio6.png';
 import ovalImg from '../assets/oval.png';
 import skillswapImg from '../assets/skillswap.png';
 import expoImg from '../assets/expo.svg';
@@ -12,6 +13,7 @@ import paypalImg from '../assets/paypal.svg';
 import sendgridImg from '../assets/sendgrid.svg';
 import awsImg from '../assets/aws.svg';
 import elasticImg from '../assets/elastic.svg';
+import chioqrImg from '../assets/chio/qrcode.png';
 
 export const projects = [
 	{
@@ -22,7 +24,8 @@ export const projects = [
 			chioImg2,
 			chioImg3,
 			chioImg4,
-			chioImg5
+			chioImg5,
+			chioImg6
 		],
 		description: "Beauty Lifestyle App",
 		fullDescription: "Chio is a social-commerce mobile platform tailored for the beauty and lifestyle industry. It uniquely combines social networking and e-commerce, enabling users to connect with beauty service providers and influencers. The platform features Stripe integration for secure, seamless service bookings, and real-time chat powered by Socket.IO to enhance user interaction. A seller dashboard equips providers with tools for managing orders, analytics, and reviews, while an admin portal offers advanced insights into user engagement and platform performance.", stack: [
@@ -60,7 +63,11 @@ export const projects = [
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
 		],
 		date: "Jan - Apr 2025",
-		category: "Mobile app & web / full-stack"
+		category: "Mobile app & web / full-stack",
+		sites: [
+			{ name: "Chio Admin", link: "https://chio-admin-timothyhfusantos-projects.vercel.app/", qr: chioqrImg },
+			{ name: "Chio Mobile", link: "https://github.com/timothyhfusanto/chio" }
+		]
 	},
 	{
 		id: "skillswap",
@@ -115,7 +122,9 @@ export const projects = [
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
 		],
 		date: "Feb - Apr 2024",
-		category: "web / full-stack"
+		category: "web / full-stack",
+		sites: [
+		]
 	},
 	{
 		id: "ovalevolution",
@@ -165,7 +174,7 @@ export const projects = [
 			github: "https://github.com/jarenl0ke/chio",
 			report: "",
 			slides: ""
-		}, 
+		},
 		details: "/project/ovalevolution",
 		keyFeatures: [
 			"Algorithm-driven post recommendations for a personalized user experience.",
@@ -178,6 +187,9 @@ export const projects = [
 			"Admin portal with advanced analytics for tracking user engagement and platform performance."
 		],
 		date: "May - Aug 2023",
-		category: "web / full-stack"
+		category: "web / full-stack",
+		sites: [
+
+		]
 	},
 ];

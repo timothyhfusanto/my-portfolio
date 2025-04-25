@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { projects } from '../utils/projectData';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/card"
+import chioqrImg from '../assets/chio/qrcode.png';
 import {
   Carousel,
   CarouselContent,
@@ -19,15 +20,19 @@ import {
   CreditCard,
   Github,
   Keyboard,
+  Laptop,
   LifeBuoy,
   Link,
   LogOut,
   Mail,
   MessageSquare,
+  PersonStanding,
   Plus,
   PlusCircle,
   Presentation,
   Settings,
+  SmartphoneCharging,
+  SmartphoneIcon,
   User,
   UserPlus,
   Users,
@@ -47,7 +52,16 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ExternalLink, Figma, FileText, Paperclip } from 'react-feather';
+import { ExternalLink, Figma, FileText, Paperclip, Phone, Smartphone } from 'react-feather';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 
 export default function ProjectDetails() {
@@ -57,6 +71,7 @@ export default function ProjectDetails() {
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0)
   const [count, setCount] = useState(0)
+  const [openDialog, setOpenDialog] = useState(null)
 
   const handleBack = () => {
     navigate('/');
@@ -97,65 +112,128 @@ export default function ProjectDetails() {
           <Button onClick={handleBack} variant='link' className="inline-block text-blue-600 hover:underline text-sm">
             ← Back to Projects
           </Button>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button>View Project <ChevronDown /></Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
-              {project.link.github && (
-                <DropdownMenuItem
-                  onClick={() => window.open(project.link.github, "_blank")}
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
-                >
-                  <Github className="w-4 h-4 text-black dark:text-white" />
-                  <span>GitHub</span>
-                  <DropdownMenuShortcut>
-                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
-                  </DropdownMenuShortcut>
-                </DropdownMenuItem>
-              )}
+          <div className='space-x-4 space-y-4'>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant='outline'>View Project <ChevronDown /></Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
+                {project.link.github && (
+                  <DropdownMenuItem
+                    onClick={() => window.open(project.link.github, "_blank")}
+                    className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                  >
+                    <Github className="w-4 h-4 text-black dark:text-white" />
+                    <span>GitHub</span>
+                    <DropdownMenuShortcut>
+                      <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                    </DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                )}
 
-              {project.link.report && (
-                <DropdownMenuItem
-                  onClick={() => window.open(project.link.report, "_blank")}
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
-                >
-                  <FileText className="w-4 h-4 text-black dark:text-white" />
-                  <span>Report</span>
-                  <DropdownMenuShortcut>
-                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
-                  </DropdownMenuShortcut>
-                </DropdownMenuItem>
-              )}
+                {project.link.report && (
+                  <DropdownMenuItem
+                    onClick={() => window.open(project.link.report, "_blank")}
+                    className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                  >
+                    <FileText className="w-4 h-4 text-black dark:text-white" />
+                    <span>Report</span>
+                    <DropdownMenuShortcut>
+                      <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                    </DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                )}
 
-              {project.link.slides && (
-                <DropdownMenuItem
-                  onClick={() => window.open(project.link.slides, "_blank")}
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
-                >
-                  <Presentation className="w-4 h-4 text-black dark:text-white" />
-                  <span>Slide deck</span>
-                  <DropdownMenuShortcut>
-                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
-                  </DropdownMenuShortcut>
-                </DropdownMenuItem>
-              )}
+                {project.link.slides && (
+                  <DropdownMenuItem
+                    onClick={() => window.open(project.link.slides, "_blank")}
+                    className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                  >
+                    <Presentation className="w-4 h-4 text-black dark:text-white" />
+                    <span>Slide deck</span>
+                    <DropdownMenuShortcut>
+                      <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                    </DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                )}
 
-              {project.link.figma && (
-                <DropdownMenuItem
-                  onClick={() => window.open(project.link.figma, "_blank")}
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
-                >
-                  <Figma className="w-4 h-4 text-black dark:text-white" />
-                  <span>Figma</span>
-                  <DropdownMenuShortcut>
-                    <ExternalLink className="w-4 h-4 text-black dark:text-white" />
-                  </DropdownMenuShortcut>
-                </DropdownMenuItem>
-              )}
+                {project.link.figma && (
+                  <DropdownMenuItem
+                    onClick={() => window.open(project.link.figma, "_blank")}
+                    className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                  >
+                    <Figma className="w-4 h-4 text-black dark:text-white" />
+                    <span>Figma</span>
+                    <DropdownMenuShortcut>
+                      <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                    </DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            {project.sites.length > 0 && (
+              <Dialog open={openDialog !== null} onOpenChange={(open) => !open && setOpenDialog(null)}>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button>Live Sites<ChevronDown /></Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
+                    {project.sites.map((site, index) => (
+                      <DialogTrigger asChild key={index}>
+                        <DropdownMenuItem
+                          onClick={() => setOpenDialog(site.name)}
+                          className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                        >
+                          {site.name === 'Chio Admin'
+                        ? <Laptop className="w-4 h-4 text-black dark:text-white" />
+                        : <Smartphone className="w-4 h-4 text-black dark:text-white" />}
+                          <span>{site.name}</span>
+                        </DropdownMenuItem>
+                      </DialogTrigger>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
 
-            </DropdownMenuContent>
-          </DropdownMenu>
+                <DialogContent className="sm:max-w-[425px]">
+                  <DialogHeader>
+                    <DialogTitle>{openDialog}</DialogTitle>
+                    <DialogDescription>
+                      {openDialog === 'Chio Admin'
+                        ? 'This is the login credential for the Chio Admin site.'
+                        : 'Scan this QR code to open the Chio app on your iPhone via Expo Go.'}
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  <div className="grid items-center gap-2 py-5">
+                    {openDialog === 'Chio Admin' ? (
+                      <>
+                        <div>Username: SuperAdmin</div>
+                        <div>Password: password</div>
+                      </>
+                    ) : (
+                      <img src={chioqrImg} alt="Chio QR Code" className="rounded-lg shadow-md w-48 mx-auto" />
+                    )}
+                  </div>
+
+                  <DialogFooter>
+                    <Button
+                      className="cursor-pointer"
+                      onClick={() => {
+                        const selectedSite = project.sites.find((site) => site.name === openDialog);
+                        if (selectedSite) {
+                          window.open(selectedSite.link, "_blank");
+                        }
+                      }}
+                    >
+                      {openDialog === 'Chio Admin' ? 'Go to Admin Site' : 'View Github'} <ExternalLink />
+                    </Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            )}
+
+          </div>
+
         </motion.div>
 
         {/* Title & Description */}
