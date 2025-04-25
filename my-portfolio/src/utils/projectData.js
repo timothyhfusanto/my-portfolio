@@ -4,18 +4,19 @@ import chioImg3 from '../assets/chio/chio3.png';
 import chioImg4 from '../assets/chio/chio4.png';
 import chioImg5 from '../assets/chio/chio5.png';
 import chioImg6 from '../assets/chio/chio6.png';
-import ovalImg from '../assets/oval.png';
+import ovalImg from '../assets/oval/oval1.png';
 import skillswapImg from '../assets/skillswap.png';
-import expoImg from '../assets/expo.svg';
-import stripeImg from '../assets/stripe.svg';
-import laravelImg from '../assets/laravel.svg';
-import paypalImg from '../assets/paypal.svg';
-import sendgridImg from '../assets/sendgrid.svg';
-import awsImg from '../assets/aws.svg';
-import elasticImg from '../assets/elastic.svg';
+import expoImg from '../assets/tech-logo/expo.svg';
+import stripeImg from '../assets/tech-logo/stripe.svg';
+import laravelImg from '../assets/tech-logo/laravel.svg';
+import paypalImg from '../assets/tech-logo/paypal.svg';
+import sendgridImg from '../assets/tech-logo/sendgrid.svg';
+import awsImg from '../assets/tech-logo/aws.svg';
+import elasticImg from '../assets/tech-logo/elastic.svg';
 import chioqrImg from '../assets/chio/qrcode.png';
+import javaImg from "../assets/tech-logo/java.svg"
 
-export const projects = [
+const notSorted = [
 	{
 		id: "chio",
 		name: "Chio",
@@ -192,4 +193,136 @@ export const projects = [
 
 		]
 	},
+	{
+		id: "smartfurnituresg",
+		name: "Smart Furniture SG",
+		images: [ovalImg],
+		description: "Furniture e-commerce platform",
+		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
+		stack: [
+			{ name: "Requirement Analysis" },
+			{ name: "Use Case Modeling" },
+			{ name: "UML Design" },
+			{ name: "Entity-Relationship Modeling (ERD)" },
+			{ name: "System Architecture" },
+			{ name: "Wireframes" },
+			{ name: "Prototyping" },
+			{ name: "UI/UX Design" },
+			{ name: "Technical Documentation" },
+			{ name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+		],
+		link: {
+			github: "https://github.com/jarenl0ke/chio",
+			report: "",
+			slides: ""
+		},
+		details: "/project/smartfurnituresg",
+		keyFeatures: [
+			"Algorithm-driven post recommendations for a personalized user experience.",
+			"User-friendly interface tailored to beauty and lifestyle content.",
+			"Follower system for connecting users with beauty service providers and influencers.",
+			"Seamless service booking and seller dashboard with order, analytics, and review management.",
+			"Real-time chat with automated welcome messages powered by WebSockets.",
+			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
+			"Automated email notifications for order confirmations and status updates.",
+			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+		],
+		date: "Aug - Nov 2023",
+		category: "Product / System Design",
+		sites: [
+
+		]
+	},
+	{
+		id: "merlionairline",
+		name: "Merlion Airline",
+		images: [ovalImg],
+		description: "Flight reservation system",
+		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
+		stack: [
+			{ name: "Java EE", logo: javaImg },
+			{ name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"}
+		],
+		link: {
+			github: "https://github.com/jarenl0ke/chio",
+			report: "",
+			slides: ""
+		},
+		details: "/project/merlionairline",
+		keyFeatures: [
+			"Algorithm-driven post recommendations for a personalized user experience.",
+			"User-friendly interface tailored to beauty and lifestyle content.",
+			"Follower system for connecting users with beauty service providers and influencers.",
+			"Seamless service booking and seller dashboard with order, analytics, and review management.",
+			"Real-time chat with automated welcome messages powered by WebSockets.",
+			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
+			"Automated email notifications for order confirmations and status updates.",
+			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+		],
+		date: "Aug - Nov 2023",
+		category: "Backend Development",
+		sites: [
+
+		]
+	},
+	{
+		id: "shelfserve",
+		name: "ShelfServe",
+		images: [ovalImg],
+		description: "Inventory management product for healthcare",
+		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
+		stack: [
+			{ name: "Java EE", logo: javaImg },
+			{ name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"}
+		],
+		link: {
+			github: "https://github.com/jarenl0ke/chio",
+			report: "",
+			slides: ""
+		},
+		details: "/project/merlionairline",
+		keyFeatures: [
+			"Algorithm-driven post recommendations for a personalized user experience.",
+			"User-friendly interface tailored to beauty and lifestyle content.",
+			"Follower system for connecting users with beauty service providers and influencers.",
+			"Seamless service booking and seller dashboard with order, analytics, and review management.",
+			"Real-time chat with automated welcome messages powered by WebSockets.",
+			"Integrated Stripe subscription payments using ChioCredit, the in-app booking currency.",
+			"Automated email notifications for order confirmations and status updates.",
+			"Admin portal with advanced analytics for tracking user engagement and platform performance."
+		],
+		date: "Jan - Apr 2025",
+		category: "Product",
+		sites: [
+
+		]
+	},
 ];
+
+export const projects = notSorted
+	.slice()
+	.sort((a, b) => {
+		const aParts = a.date.split(' ');
+		const bParts = b.date.split(' ');
+
+		const aEndMonth = aParts[2];
+		const aYear = aParts[3];
+
+		const bEndMonth = bParts[2];
+		const bYear = bParts[3];
+
+		const monthToNumber = (month) => {
+			const months = [
+				"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+				"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+			];
+			return months.indexOf(month);
+		};
+
+		const aDate = new Date(Number(aYear), monthToNumber(aEndMonth));
+		const bDate = new Date(Number(bYear), monthToNumber(bEndMonth));
+
+		return bDate - aDate; // sort from newest to oldest
+	});
+
+

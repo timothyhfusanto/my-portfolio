@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'react-feather';
-import background from '../assets/background.jpg';
+import background from '../assets/general/background.jpg';
 
 export default function Hero() {
 	return (

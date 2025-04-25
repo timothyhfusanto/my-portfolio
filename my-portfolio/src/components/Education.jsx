@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import nusLogo from '../assets/nus.png';
-import sutomoLogo from '../assets/sutomo.png';
+import nusLogo from '../assets/general/nus.png';
+import sutomoLogo from '../assets/general/sutomo.png';
 
 export default function Education() {
 	const schools = [

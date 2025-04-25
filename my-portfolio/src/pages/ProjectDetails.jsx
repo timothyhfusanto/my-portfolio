@@ -185,8 +185,8 @@ export default function ProjectDetails() {
                           className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
                         >
                           {site.name === 'Chio Admin'
-                        ? <Laptop className="w-4 h-4 text-black dark:text-white" />
-                        : <Smartphone className="w-4 h-4 text-black dark:text-white" />}
+                            ? <Laptop className="w-4 h-4 text-black dark:text-white" />
+                            : <Smartphone className="w-4 h-4 text-black dark:text-white" />}
                           <span>{site.name}</span>
                         </DropdownMenuItem>
                       </DialogTrigger>
@@ -302,11 +302,13 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
           className="text-left w-full"
         >
-          <h2 className="text-2xl font-semibold mb-2">Tech Stack</h2>
+          <h2 className="text-2xl font-semibold mb-4">{project.type}Tech Stack</h2>
           <div className="flex flex-wrap gap-3">
             {project.stack.map((tech, i) => (
               <div key={i} className="bg-blue-100 dark:text-white flex items-center text-blue-800 dark:bg-blue-800 gap-2 px-4 py-2 rounded-lg shadow-sm transform-scale-100 hover:scale-105 transition duration-300 ease-in-out">
-                <img src={tech.logo} alt={tech.name} className="w-5 h-5" />
+                {tech.logo && (
+                  <img src={tech.logo} alt={tech.name} className="w-5 h-5" />
+                )}
                 <span className="text-sm font-medium text-gray-800 dark:text-white">{tech.name}</span>
               </div>
             ))}
