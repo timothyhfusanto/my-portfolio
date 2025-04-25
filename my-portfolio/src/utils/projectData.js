@@ -118,7 +118,7 @@ const notSorted = [
 		},
 		details: "/project/skillswap",
 		keyFeatures: [
-			
+
 		],
 		date: "Feb - Apr 2024",
 		category: "web / full-stack",
@@ -177,7 +177,7 @@ const notSorted = [
 		},
 		details: "/project/ovalevolution",
 		keyFeatures: [
-			
+
 		],
 		date: "May - Aug 2023",
 		category: "web / full-stack",
