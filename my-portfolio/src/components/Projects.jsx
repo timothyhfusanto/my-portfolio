@@ -26,7 +26,7 @@ export default function Projects() {
     >
       <div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
-        <div className="relative w-full max-w-7xl h-[calc(100vh-150px)] flex flex-col">
+        <div className="relative w-full max-w-7xl min-h-screen flex flex-col">
           {/* Search bar at the top */}
           <div className="relative w-full max-w-xl mx-auto mb-8">
             <Input
@@ -36,7 +36,7 @@ export default function Projects() {
               value={textQuery}
               onChange={(e) => setTextQuery(e.target.value)}
             />
-            <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+            <div className="absolute inset-y-0 left-4 bottom-3 flex items-center pointer-events-none">
               <Search className="w-5 h-5 text-gray-400" />
             </div>
           </div>
