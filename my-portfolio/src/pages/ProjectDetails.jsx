@@ -34,6 +34,7 @@ import {
   SmartphoneCharging,
   SmartphoneIcon,
   User,
+  UserCog,
   UserPlus,
   Users,
 } from "lucide-react"
@@ -185,7 +186,7 @@ export default function ProjectDetails() {
                           className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
                         >
                           {site.name === 'Chio Admin'
-                            ? <Laptop className="w-4 h-4 text-black dark:text-white" />
+                            ? <UserCog className="w-4 h-4 text-black dark:text-white" />
                             : <Smartphone className="w-4 h-4 text-black dark:text-white" />}
                           <span>{site.name}</span>
                         </DropdownMenuItem>

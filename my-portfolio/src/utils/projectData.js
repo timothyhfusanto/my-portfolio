@@ -66,8 +66,9 @@ const notSorted = [
 		date: "Jan - Apr 2025",
 		category: "Mobile app & web / full-stack",
 		sites: [
+			{ name: "Chio", link: "https://github.com/timothyhfusanto/chio" },
 			{ name: "Chio Admin", link: "https://chio-admin-timothyhfusantos-projects.vercel.app/", qr: chioqrImg },
-			{ name: "Chio Mobile", link: "https://github.com/timothyhfusanto/chio" }
+
 		]
 	},
 	{
@@ -241,7 +242,7 @@ const notSorted = [
 		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
 		stack: [
 			{ name: "Java EE", logo: javaImg },
-			{ name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"}
+			{ name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
 		],
 		link: {
 			github: "https://github.com/jarenl0ke/chio",
@@ -272,15 +273,30 @@ const notSorted = [
 		description: "Inventory management product for healthcare",
 		fullDescription: "Furniture is a one-stop customer service platform designed to streamline restaurant operations. It offers an online menu ordering system that allows customers to place orders directly from their devices. The platform includes features such as order management, payment processing, and customer feedback collection — all aimed at enhancing the dining experience and improving operational efficiency. By eliminating manual service queues, it provides restaurants with a more streamlined approach to handling orders and managing menus.",
 		stack: [
-			{ name: "Java EE", logo: javaImg },
-			{ name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"}
+			{ name: "Product Requirements Gathering" },
+			{ name: "Product Management" },
+			{ name: "Problem Identification" },
+			{ name: "Market Research & Analysis" },
+			{ name: "Competitive Analysis" },
+			{ name: "Business Model Canvas" },
+			{ name: "Product Roadmap Planning" },
+			{ name: "Go-To-Market (GTM) Strategy" },
+			{ name: "Financial Forecasting" },
+			{ name: "User Stories" },
+			{ name: "User Flows" },
+			{ name: "Wireframes" },
+			{ name: "Prototyping" },
+			{ name: "UI/UX Design" },
+			{ name: "Technical Documentation" },
+			{ name: "Stakeholder Interviewing" },
+			{ name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
 		],
 		link: {
-			github: "https://github.com/jarenl0ke/chio",
-			report: "",
-			slides: ""
+			report: "https://docs.google.com/document/d/1Ujh0TMP2kdQJwXth5fpYJKnQuHh7_1JbP8xxQmGkQSI/edit?usp=sharing",
+			slides: "https://www.canva.com/design/DAGlqmDNBwQ/muSJvduGinTJ6CE7N-Ok6g/edit?utm_content=DAGlqmDNBwQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+			figma : "https://www.figma.com/design/zYntj5xq1fAlKUv0jN3R23/IS4262-Wireframes?node-id=19-63&t=PB1e5irZ2trqnm3v-1"
 		},
-		details: "/project/merlionairline",
+		details: "/project/shelfserve",
 		keyFeatures: [
 			"Algorithm-driven post recommendations for a personalized user experience.",
 			"User-friendly interface tailored to beauty and lifestyle content.",
