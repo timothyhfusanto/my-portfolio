@@ -36,7 +36,7 @@ export default function Projects() {
               value={textQuery}
               onChange={(e) => setTextQuery(e.target.value)}
             />
-            <div className="absolute inset-y-0 left-4 bottom-3 flex items-center pointer-events-none">
+            <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
               <Search className="w-5 h-5 text-gray-400" />
             </div>
           </div>

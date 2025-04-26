@@ -117,7 +117,7 @@ export default function ProjectDetails() {
             <DropdownMenu>
               {(project.link.github || project.link.report || project.link.slides) && (
                 <DropdownMenuTrigger asChild>
-                  <Button variant='outline'>View Project <ChevronDown /></Button>
+                  <Button variant='outline'>View project details<ChevronDown /></Button>
                 </DropdownMenuTrigger>
               )}
               <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">

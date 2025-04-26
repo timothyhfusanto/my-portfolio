@@ -18,6 +18,7 @@ import javaImg from "../assets/tech-logo/java.svg"
 import smartsgImg from "../assets/smartsg/smartsg1.png";
 import merlionImg from "../assets/merlion/merlion1.png";
 import shelfserveImg from "../assets/shelfserve/shelfserve1.png";
+import shelfserveImg2 from "../assets/shelfserve/shelfserve2.png";
 
 const notSorted = [
 	{
@@ -70,8 +71,8 @@ const notSorted = [
 		date: "Jan - Apr 2025",
 		category: "Mobile app & web / full-stack",
 		sites: [
-			{ name: "Chio", link: "https://github.com/timothyhfusanto/chio" },
-			{ name: "Chio Admin", link: "https://chio-admin-timothyhfusantos-projects.vercel.app/", qr: chioqrImg },
+			{ name: "Chio", link: "https://github.com/timothyhfusanto/chio", qr: chioqrImg },
+			{ name: "Chio Admin", link: "https://chioadmin.vercel.app/" },
 		]
 	},
 	{
@@ -208,7 +209,7 @@ const notSorted = [
 		],
 		link: {
 			github: "",
-			report: "",
+			report: "https://docs.google.com/document/d/1UK20Evbm2YDwGrimBiXvNHj7GcCMMTTzfdV6Ny6xN1U/edit?usp=sharing",
 			slides: ""
 		},
 		details: "/project/smartfurnituresg",
@@ -251,7 +252,7 @@ const notSorted = [
 		id: "shelfserve",
 		name: "ShelfServe",
 		type: "product",
-		images: [shelfserveImg],
+		images: [shelfserveImg, shelfserveImg2],
 		description: "Inventory management product for healthcare",
 		fullDescription: "ShelfServe is a smart weight sensor system designed to help healthcare professionals manage inventory with real-time stock monitoring and automated threshold alerts. It features a user-friendly software interface that enables easy access to actionable data, empowering healthcare teams to make informed, timely inventory decisions.",
 		stack: [
@@ -271,7 +272,6 @@ const notSorted = [
 			{ name: "UI/UX Design" },
 			{ name: "Technical Documentation" },
 			{ name: "Stakeholder Interviewing" },
-			{ name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
 		],
 		link: {
 			report: "https://docs.google.com/document/d/1Ujh0TMP2kdQJwXth5fpYJKnQuHh7_1JbP8xxQmGkQSI/edit?usp=sharing",

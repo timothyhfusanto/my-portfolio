@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X } from 'react-feather';
 
-const sections = ['home', 'about', 'education', 'projects', 'contact'];
+const sections = ['home', 'about', 'education', 'projects', 'skills', 'contact'];
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home');
