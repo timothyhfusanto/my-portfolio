@@ -2,6 +2,9 @@ import laravelImg from '../assets/tech-logo/laravel.svg';
 import expoImg from '../assets/tech-logo/expo.svg';
 import solidityImg from '../assets/tech-logo/solidity.svg';
 import chakrauiImg from '../assets/tech-logo/chakraui.svg';
+import renderImg from '../assets/tech-logo/render.svg';
+import awsImg from '../assets/tech-logo/aws.svg';
+import postmanImg from '../assets/tech-logo/postman.svg';
 
 export const techStackLanguages = [
   { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
@@ -41,10 +44,10 @@ export const techStackFrontendFramework = [
 export const techStackDevOps = [
   { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
   { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-  { name: "AWS S3", logo: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" }, // AWS general logo
+  { name: "AWS S3", logo: awsImg },
   { name: "Vercel", logo: "https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico" },
-  { name: "Render", logo: "https://dashboard.render.com/favicon.ico" },
-  { name: "Postman", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-icon.svg" }
+  { name: "Render", logo: renderImg },
+  { name: "Postman", logo: postmanImg}
 ];
 
 export const techStackDatabases = [
