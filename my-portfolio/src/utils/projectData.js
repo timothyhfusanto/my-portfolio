@@ -303,7 +303,7 @@ const notSorted = [
 		type: "app",
 		images: [timchatImg],
 		description: "A simple chat application",
-		fullDescription: "TimChat is a real-time chat application that allows users to send and receive messages instantly. It features secure authentication using JWT and bcrypt for password hashing, and offers a user-friendly, responsive interface built with modern web technologies to ensure an interactive experience.",
+		fullDescription: "TimChat is a real-time chat application that allows users to send and receive messages instantly utilizing Socket.IO. It features secure authentication using JWT and bcrypt for password hashing, and offers a user-friendly, responsive interface built with modern web technologies to ensure an interactive experience.",
 		stack: [
 			{ name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
 			{ name: "Express.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
