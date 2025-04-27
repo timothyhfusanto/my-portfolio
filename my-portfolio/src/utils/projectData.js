@@ -19,6 +19,8 @@ import smartsgImg from "../assets/smartsg/smartsg1.png";
 import merlionImg from "../assets/merlion/merlion1.png";
 import shelfserveImg from "../assets/shelfserve/shelfserve1.png";
 import shelfserveImg2 from "../assets/shelfserve/shelfserve2.png";
+import timchatImg from "../assets/timchat/timchat1.png";
+import cloudinaryImg from "../assets/tech-logo/cloudinary.svg";
 
 const notSorted = [
 	{
@@ -293,6 +295,38 @@ const notSorted = [
 		category: "Product",
 		sites: [
 
+		]
+	},
+	{
+		id: "timchat",
+		name: "TimChat",
+		type: "app",
+		images: [timchatImg],
+		description: "A simple chat application",
+		fullDescription: "TimChat is a real-time chat application that allows users to send and receive messages instantly. It features secure authentication using JWT and bcrypt for password hashing, and offers a user-friendly, responsive interface built with modern web technologies to ensure an interactive experience.",
+		stack: [
+			{ name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+			{ name: "Express.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+			{ name: "Socket.IO", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" },
+			{ name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+			{ name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+			{ name: "DaisyUI", logo: "https://img.daisyui.com/images/daisyui/mark-rotating.svg" },
+			{ name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+			{ name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+			{ name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+			{ name: "Cloudinary", logo: cloudinaryImg },
+		],
+		link: {
+			github: "https://github.com/timothyhfusanto/TimChat",
+		},
+		details: "/project/timchat",
+		keyFeatures: [
+
+		],
+		date: "Dec - Jan 2025",
+		category: "Web / full-stack",
+		sites: [
+			{ name: "TimChat", link: "https://timchat.vercel.app/" },
 		]
 	},
 ];

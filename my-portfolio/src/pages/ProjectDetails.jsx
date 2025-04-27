@@ -175,67 +175,83 @@ export default function ProjectDetails() {
               </DropdownMenuContent>
             </DropdownMenu>
             {project.sites.length > 0 && (
-              <Dialog open={openDialog !== null} onOpenChange={(open) => !open && setOpenDialog(null)}>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button>Live Sites<ChevronDown /></Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
-                    {project.sites.map((site, index) => (
-                      <DialogTrigger asChild key={index}>
-                        <DropdownMenuItem
-                          onClick={() => setOpenDialog(site.name)}
-                          className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+              <>
+                {project.sites.length > 1 ? (
+                  // Multiple sites -> Show dropdown
+                  <Dialog open={openDialog !== null} onOpenChange={(open) => !open && setOpenDialog(null)}>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button>Live Sites <ChevronDown /></Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
+                        {project.sites.map((site, index) => (
+                          <DialogTrigger asChild key={index}>
+                            <DropdownMenuItem
+                              onClick={() => setOpenDialog(site.name)}
+                              className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                            >
+                              {site.name === 'Chio Admin'
+                                ? <UserCog className="w-4 h-4 text-black dark:text-white" />
+                                : site.name === 'Chio'
+                                  ? <Smartphone className="w-4 h-4 text-black dark:text-white" />
+                                  : <Link className="w-4 h-4 text-black dark:text-white" />
+                              }
+                              <span>{site.name}</span>
+                              <DropdownMenuShortcut>
+                                <ExternalLink className="w-4 h-4 text-black dark:text-white" />
+                              </DropdownMenuShortcut>
+                            </DropdownMenuItem>
+                          </DialogTrigger>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+
+                    <DialogContent className="sm:max-w-[425px]">
+                      <DialogHeader>
+                        <DialogTitle>{openDialog}</DialogTitle>
+                        <DialogDescription>
+                          {openDialog === 'Chio Admin'
+                            ? 'This is the login credential for the Chio Admin site.'
+                            : 'Scan this QR code to open the Chio app on your iPhone via Expo Go.'}
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      <div className="grid items-center gap-2 py-5">
+                        {openDialog === 'Chio Admin' ? (
+                          <>
+                            <div>Username: SuperAdmin</div>
+                            <div>Password: password</div>
+                          </>
+                        ) : (
+                          <img src={chioqrImg} alt="Chio QR Code" className="rounded-lg shadow-md w-48 mx-auto" />
+                        )}
+                      </div>
+
+                      <DialogFooter>
+                        <Button
+                          className="cursor-pointer"
+                          onClick={() => {
+                            const selectedSite = project.sites.find((site) => site.name === openDialog);
+                            if (selectedSite) {
+                              window.open(selectedSite.link, "_blank");
+                            }
+                          }}
                         >
-                          {site.name === 'Chio Admin'
-                            ? <UserCog className="w-4 h-4 text-black dark:text-white" />
-                            : <Smartphone className="w-4 h-4 text-black dark:text-white" />}
-                          <span>{site.name}</span>
-                          <DropdownMenuShortcut>
-                            <ExternalLink className="w-4 h-4 text-black dark:text-white" />
-                          </DropdownMenuShortcut>
-                        </DropdownMenuItem>
-                      </DialogTrigger>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                          {openDialog === 'Chio Admin' ? 'Go to Chio Admin' : 'View Github'} <ExternalLink />
+                        </Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
+                ) : (
+                  // Only one site -> Direct Button
+                  <Button
+                    onClick={() => window.open(project.sites[0].link, "_blank")}
 
-                <DialogContent className="sm:max-w-[425px]">
-                  <DialogHeader>
-                    <DialogTitle>{openDialog}</DialogTitle>
-                    <DialogDescription>
-                      {openDialog === 'Chio Admin'
-                        ? 'This is the login credential for the Chio Admin site.'
-                        : 'Scan this QR code to open the Chio app on your iPhone via Expo Go.'}
-                    </DialogDescription>
-                  </DialogHeader>
-
-                  <div className="grid items-center gap-2 py-5">
-                    {openDialog === 'Chio Admin' ? (
-                      <>
-                        <div>Username: SuperAdmin</div>
-                        <div>Password: password</div>
-                      </>
-                    ) : (
-                      <img src={chioqrImg} alt="Chio QR Code" className="rounded-lg shadow-md w-48 mx-auto" />
-                    )}
-                  </div>
-
-                  <DialogFooter>
-                    <Button
-                      className="cursor-pointer"
-                      onClick={() => {
-                        const selectedSite = project.sites.find((site) => site.name === openDialog);
-                        if (selectedSite) {
-                          window.open(selectedSite.link, "_blank");
-                        }
-                      }}
-                    >
-                      {openDialog === 'Chio Admin' ? 'Go to Chio Admin' : 'View Github'} <ExternalLink />
-                    </Button>
-                  </DialogFooter>
-                </DialogContent>
-              </Dialog>
+                  >
+                    Live Site <ExternalLink className="w-4 h-4" />
+                  </Button>
+                )}
+              </>
             )}
 
           </div>

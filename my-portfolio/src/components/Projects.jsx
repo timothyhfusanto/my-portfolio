@@ -58,7 +58,7 @@ export default function Projects() {
                     className="bg-white dark:bg-gray-900 shadow-md rounded-xl p-6 text-left border border-gray-200 dark:border-gray-700"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    transition={{ delay: index < 6 ? index * 0.2 : (index - 6) * 0.2, duration: 0.5 }}
                     viewport={{ once: true }}
                   >
                     <Link to={project.details}>
