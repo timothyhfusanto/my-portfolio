@@ -71,11 +71,11 @@ export default function Skills() {
           {/* Technical Skills Tab */}
           <TabsContent value="technical" className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
             <SectionCard title="Programming Languages" items={techStackLanguages} />
-            <SectionCard title="Backend Frameworks & Tools" items={techStackBackendFramework} />
-            <SectionCard title="Frontend Frameworks & Libraries" items={techStackFrontendFramework} />
+            <SectionCard title="Backend Development" items={techStackBackendFramework} />
+            <SectionCard title="Frontend Development" items={techStackFrontendFramework} />
             <SectionCard title="Databases" items={techStackDatabases} />
             <SectionCard title="DevOps & Tools" items={techStackDevOps} />
-            <SectionCard title="Analytics Tools" items={techStackAnalytics} />
+            <SectionCard title="Analytics" items={techStackAnalytics} />
           </TabsContent>
 
           {/* Product Skills Tab */}

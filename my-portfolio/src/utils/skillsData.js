@@ -16,7 +16,8 @@ export const techStackLanguages = [
   { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
   { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-  { name: "Solidity", logo: solidityImg }
+  { name: "Solidity", logo: solidityImg },
+  { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
 ];
 
 export const techStackBackendFramework = [
@@ -47,7 +48,7 @@ export const techStackDevOps = [
   { name: "AWS S3", logo: awsImg },
   { name: "Vercel", logo: "https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico" },
   { name: "Render", logo: renderImg },
-  { name: "Postman", logo: postmanImg}
+  { name: "Postman", logo: postmanImg }
 ];
 
 export const techStackDatabases = [
