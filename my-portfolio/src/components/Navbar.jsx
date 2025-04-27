@@ -34,7 +34,13 @@ export default function Navbar() {
     <header className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-md transition-colors duration-300 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="/" className="text-2xl font-bold">Timothy</a>
+        <a href="/" className="text-2xl font-bold">
+          <img
+            src="/logo.svg"
+            alt="Logo"
+            className="h-10 w-auto"
+          />
+        </a>
 
         {/* Desktop Nav */}
         {isHomePage && (
