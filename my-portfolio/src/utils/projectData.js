@@ -242,8 +242,15 @@ const notSorted = [
 		},
 		details: "/project/merlionairline",
 		keyFeatures: [
-
-		],
+			"Implemented a flight reservation system with two user roles: bookers and airline staff.",
+			"Developed a backend system using Java EE and MySQL for robust data management.",
+			"Enabled users to search for flights, book tickets, and manage their reservations seamlessly.",
+			"Designed a mock payment history system to simulate real-world financial transactions.",
+			"Created a dynamic pricing model based on seat classes and aircraft types.",
+			"Built an admin portal for airline staff to manage flight schedules, aircraft types, and seat configurations.",
+			"Supported booking for both returning and direct flights across multiple airlines.",
+			"Integrated seat selection functionality during the booking process for an enhanced user experience.",
+		  ],
 		date: "Aug - Nov 2023",
 		category: "Backend Development",
 		sites: [
@@ -255,7 +262,7 @@ const notSorted = [
 		name: "ShelfServe",
 		type: "product",
 		images: [shelfserveImg, shelfserveImg2],
-		description: "Inventory management product for healthcare",
+		description: "Smart Stock Management for Hospitals",
 		fullDescription: "ShelfServe is a smart weight sensor system designed to help healthcare professionals manage inventory with real-time stock monitoring and automated threshold alerts. It features a user-friendly software interface that enables easy access to actionable data, empowering healthcare teams to make informed, timely inventory decisions.",
 		stack: [
 			{ name: "Product Requirements Gathering" },
@@ -321,7 +328,12 @@ const notSorted = [
 		},
 		details: "/project/timchat",
 		keyFeatures: [
-
+			"Real-time messaging with Socket.IO for instant communication.",
+			"Secure authentication using JWT and bcrypt for password hashing.",
+			"Responsive design for seamless use across devices.",
+			"User-friendly interface built with React and Tailwind CSS.",
+			"Image upload functionality powered by Cloudinary.",
+			"Customizable themes using DaisyUI for a personalized experience."
 		],
 		date: "Dec - Jan 2025",
 		category: "Web / full-stack",

@@ -28,7 +28,7 @@ export default function About() {
 					transition={{ delay: 0.4, duration: 0.6 }}
 					viewport={{ once: true }}
 				>
-					<h2 className="text-3xl font-bold mb-4">About Me</h2>
+					<h2 className="text-5xl font-bold mb-4">About Me</h2>
 
 					<p className="max-w-2xl text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
 						I'm a penultimate year student at the National University of Singapore, majoring in Information Systems. I am deeply passionate about exploring the dynamic intersection of technology, business, and innovation.

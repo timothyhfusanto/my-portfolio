@@ -1,11 +1,15 @@
 export default {
 	darkMode: 'class',
 	content: [
-	  "./index.html",
-	  "./src/**/*.{js,ts,jsx,tsx}",
+		"./index.html",
+		"./src/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-	  extend: {},
+		extend: {
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [],
-  }
+}

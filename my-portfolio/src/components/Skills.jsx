@@ -50,7 +50,7 @@ export default function Skills() {
       className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <h2 className="text-4xl font-bold mb-16 text-center">Skills</h2>
+        <h2 className="text-5xl font-bold mb-16 text-center">Skills</h2>
 
         <Tabs defaultValue="technical" className="w-full flex flex-col items-center">
           <TabsList className="mb-8 bg-white dark:bg-gray-800 shadow-md">

@@ -25,10 +25,10 @@ export default function Projects() {
       className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
     >
       <div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
-        <h2 className="text-4xl font-bold mb-12">Projects</h2>
+        <h2 className="text-5xl font-bold mb-12">Projects</h2>
         <div className="relative w-full max-w-7xl min-h-screen flex flex-col">
           {/* Search bar at the top */}
-          <div className="relative w-full max-w-xl mx-auto mb-8">
+          <div className="relative w-full max-w-xl mx-auto mb-20">
             <Input
               type="text"
               placeholder="Search projects..."
@@ -55,32 +55,37 @@ export default function Projects() {
                 filteredProjects.slice(0, projectsToShow).map((project, index) => (
                   <motion.div
                     key={index}
-                    className="bg-white dark:bg-gray-900 shadow-md rounded-xl p-6 text-left border border-gray-200 dark:border-gray-700"
+                    className="bg-white dark:bg-gray-900 rounded-xl shadow-md text-left border overflow-hidden border-gray-200 dark:border-gray-700"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index < 6 ? index * 0.2 : (index - 6) * 0.2, duration: 0.5 }}
                     viewport={{ once: true }}
                   >
-                    <Link to={project.details}>
-                      <img
-                        src={project.images[0]}
-                        alt={project.name}
-                        className="w-full h-48 object-cover rounded-lg mb-4 transform-scale-100 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
-                      />
-                    </Link>
-
-                    <div className="text-sm justify-between flex items-center">
-                      <h3 className="text-2xl font-semibold mb-1">{project.name}</h3>
-                      <div className="text-gray-500 dark:text-gray-400">{project.date}</div>
+                    <div className='overflow-hidden'>
+                      <Link to={project.details}>
+                        <img
+                          src={project.images[0]}
+                          alt={project.name}
+                          className="w-full object-cover transform-scale-100 hover:scale-115 transition duration-300 ease-in-out cursor-pointer"
+                        />
+                      </Link>
                     </div>
 
-                    <p className="text-gray-500 dark:text-gray-300 mb-5">{project.description}</p>
+                    <div className='p-6'>
+                      <div className="text-sm justify-between flex items-center">
+                        <h3 className="text-2xl font-semibold mb-1">{project.name}</h3>
+                        <div className="text-gray-500 text-xs dark:text-gray-400">{project.date}</div>
+                      </div>
 
-                    <div className="text-sm text-gray-500 dark:text-gray-400 justify-between flex">
-                      <div className="bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full capitalize">
-                        {project.category}
+                      <p className="text-gray-500 text-md dark:text-gray-300 mb-5">{project.description}</p>
+
+                      <div className="text-sm text-gray-500 dark:text-gray-400 justify-between flex">
+                        <div className="bg-blue-100 text-blue-600 dark:bg-blue-800 dark:text-blue-100 text-xs px-3 py-1 rounded-full capitalize">
+                          {project.category}
+                        </div>
                       </div>
                     </div>
+
                   </motion.div>
                 ))
               ) : (

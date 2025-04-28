@@ -124,7 +124,7 @@ export default function ProjectDetails() {
                 {project.link.github && (
                   <DropdownMenuItem
                     onClick={() => window.open(project.link.github, "_blank")}
-                    className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                    className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2 cursor-pointer"
                   >
                     <Github className="w-4 h-4 text-black dark:text-white" />
                     <span>GitHub</span>
@@ -188,7 +188,7 @@ export default function ProjectDetails() {
                           <DialogTrigger asChild key={index}>
                             <DropdownMenuItem
                               onClick={() => setOpenDialog(site.name)}
-                              className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2"
+                              className="hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 flex items-center gap-2 cursor-pointer"
                             >
                               {site.name === 'Chio Admin'
                                 ? <UserCog className="w-4 h-4 text-black dark:text-white" />
@@ -246,7 +246,7 @@ export default function ProjectDetails() {
                   // Only one site -> Direct Button
                   <Button
                     onClick={() => window.open(project.sites[0].link, "_blank")}
-
+                    className='cursor-pointer'
                   >
                     Live Site <ExternalLink className="w-4 h-4" />
                   </Button>
