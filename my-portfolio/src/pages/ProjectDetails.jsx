@@ -212,7 +212,7 @@ export default function ProjectDetails() {
                         <DialogDescription>
                           {openDialog === 'Chio Admin'
                             ? 'This is the login credential for the Chio Admin site.'
-                            : 'Scan this QR code to open the Chio app on your iPhone via Expo Go.'}
+                            : 'Scan this QR code to open the Chio app on your phone via Expo Go.'}
                         </DialogDescription>
                       </DialogHeader>
 
