@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X } from 'react-feather';
+import { motion } from 'framer-motion';
 
 const sections = ['home', 'about', 'education', 'projects', 'skills', 'contact'];
 
@@ -50,8 +51,8 @@ export default function Navbar() {
                 key={section}
                 href={`#${section}`}
                 className={`transition ${activeSection === section
-                    ? 'text-blue-500 dark:text-yellow-400 font-semibold'
-                    : 'hover:text-blue-500 dark:hover:text-yellow-400'
+                  ? 'text-blue-500 dark:text-yellow-400 font-semibold'
+                  : 'hover:text-blue-500 dark:hover:text-yellow-400'
                   }`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -76,19 +77,26 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isHomePage && menuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4 space-y-2 text-sm font-medium">
-          {sections.map((section) => (
-            <a
+        <div className="md:hidden bg-gray-300/30 dark:bg-gray-800/10 p-4 text-center">
+          {sections.map((section, index) => (
+            <motion.a
               key={section}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
               href={`#${section}`}
               onClick={() => setMenuOpen(false)}
-              className={`block transition ${activeSection === section
-                  ? 'text-blue-500 dark:text-yellow-400 font-semibold'
-                  : 'hover:text-blue-500 dark:hover:text-yellow-400'
+              className={`block text-lg font-semibold ${activeSection === section
+                ? 'text-blue-500 dark:text-yellow-400'
+                : 'hover:text-blue-500 dark:hover:text-yellow-400'
                 }`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
-            </a>
+              {index < sections.length - 1 && (
+                <hr className="border-t border-gray-400 dark:border-gray-600 m-3" />
+              )}
+            </motion.a>
           ))}
         </div>
       )}
