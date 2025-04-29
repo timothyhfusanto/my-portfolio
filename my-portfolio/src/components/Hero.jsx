@@ -27,7 +27,7 @@ export default function Hero() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.2, duration: 0.6 }}
 				>
-					I’m a student <span className="text-yellow-400 font-semibold">full-stack developer</span> & <span className="text-yellow-400 font-semibold">product manager</span>  who loves planning and building functional application systems
+					I’m a student <span className="text-yellow-400 font-semibold">software developer</span> & <span className="text-yellow-400 font-semibold">product manager</span>  who loves planning and building functional application systems
 				</motion.p>
 
 				<motion.a

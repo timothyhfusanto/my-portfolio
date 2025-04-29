@@ -9,7 +9,7 @@ export default function Education() {
 			name: "National University of Singapore (NUS)",
 			duration: "2022 – Present",
 			degree: "Bachelor of Computing in Information Systems",
-			skills: ["Web Development", "Application Development", "Data Presentation", "Database Management", "UX/UI", "Solution Architecture", "Business Process Management", "Product Management"],
+			skills: ["Web Development", "Application Development", "Data Visualization", "Database Management", "UX/UI Design", "Solution Architecture", "Business Process Management", "Product Management"],
 			logo: nusLogo
 		},
 		{
