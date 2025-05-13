@@ -53,7 +53,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ExternalLink, Figma, FileText, Paperclip, Phone, Smartphone } from 'react-feather';
+import { AlertTriangle, ExternalLink, Figma, FileText, Globe, Paperclip, Phone, Smartphone } from 'react-feather';
 import {
   Dialog,
   DialogContent,
@@ -63,7 +63,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-
+import { Alert } from '@/components/ui/alert';
+import { AlertDescription, AlertTitle } from '@/components/ui/alert';
+import LiveSiteNotice from '@/components/LiveSiteNotice';
 
 export default function ProjectDetails() {
   const { id } = useParams();
@@ -102,6 +104,19 @@ export default function ProjectDetails() {
   return (
     <section className="min-h-screen py-25 bg-white dark:bg-gray-950 text-gray-900 dark:text-white px-6 transition-colors duration-300">
       <div className="max-w-5xl mx-auto space-y-16 text-center items-center justify-center flex flex-col ">
+        {project.sites.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb-2'
+          >
+            <LiveSiteNotice />
+
+          </motion.div>
+        )}
+
         {/* Back Link */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -181,7 +196,12 @@ export default function ProjectDetails() {
                   <Dialog open={openDialog !== null} onOpenChange={(open) => !open && setOpenDialog(null)}>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-                        <Button>Live Sites <ChevronDown /></Button>
+                        <Button>
+                          <Globe />
+                          Live Sites
+                          <ChevronDown className="w-4 h-4" />
+                        </Button>
+
                       </DropdownMenuTrigger>
                       <DropdownMenuContent className="w-56 bg-white dark:bg-gray-900 text-black dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg">
                         {project.sites.map((site, index) => (
@@ -203,6 +223,7 @@ export default function ProjectDetails() {
                             </DropdownMenuItem>
                           </DialogTrigger>
                         ))}
+
                       </DropdownMenuContent>
                     </DropdownMenu>
 
@@ -253,7 +274,6 @@ export default function ProjectDetails() {
                 )}
               </>
             )}
-
           </div>
 
         </motion.div>
