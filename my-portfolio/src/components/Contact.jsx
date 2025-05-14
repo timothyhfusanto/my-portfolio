@@ -61,7 +61,7 @@ export default function Contact() {
 						<motion.div
 							initial={{ opacity: 0, y: -60 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.8, duration: 0.8 }}
+							transition={{ delay: 0.6, duration: 0.8 }}
 							viewport={{ once: true }}
 						>
 							<p className="text-6xl uppercase leading-[1]">
@@ -73,7 +73,7 @@ export default function Contact() {
 					<motion.div
 						initial={{ opacity: 0, y: -60 }}
 						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ delay: 0.8, duration: 0.8 }}
+						transition={{ delay: 0.6, duration: 0.8 }}
 						viewport={{ once: true }}
 						className="flex flex-col justify-end text-right mt-5 lg:mt-0">
 						<p className="text-xl font-light uppercase leading-relaxed">
@@ -86,9 +86,9 @@ export default function Contact() {
 					{/* Form */}
 					<motion.div
 						className="space-y-6 text-left md:col-span-5 col-span-12 p-4"
-						initial={{ opacity: 0, x: 50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.6 }}
+						initial={{ opacity: 0, y: -60 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.6, duration: 0.8 }}
 						viewport={{ once: true }}
 					>
 						<p className="text-2xl uppercase leading-[1]">
@@ -146,10 +146,10 @@ export default function Contact() {
 					<motion.form
 						ref={form}
 						onSubmit={sendEmail}
-						initial={{ opacity: 0, x: -50 }}
+						initial={{ opacity: 0, y: -60 }}
 						className="w-full flex flex-col gap-6 md:col-span-7 col-span-12"
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.6 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.6, duration: 0.8 }}
 						viewport={{ once: true }}
 					>
 						<div className="p-4">
