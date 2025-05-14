@@ -18,7 +18,7 @@ export default function About() {
 			className="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-white transition-colors duration-300 p-6"
 		>
 			<div className="mx-auto flex flex-col w-full min-h-screen px-6 py-16 text-center">
-				<div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-30'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-20'>
 					<motion.div
 						initial={{ opacity: 0, y: -60 }}
 						whileInView={{ opacity: 1, y: 0 }}

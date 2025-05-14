@@ -51,7 +51,7 @@ export default function Education() {
 							<motion.div
 								key={index}
 								className="relative mb-16 pl-8 ml-8"
-								initial={{ opacity: 0, y: 60 }}
+								initial={{ opacity: 0, y: -60 }}
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ delay: index * 0.4, duration: 0.8 }}
 								viewport={{ once: true }}
