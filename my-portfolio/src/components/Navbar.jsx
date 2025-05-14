@@ -32,7 +32,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-md transition-colors duration-300 fixed w-full top-0 z-50">
+    <header className="dark:bg-gray-950 bg-gray-50 text-gray-900 dark:text-white duration-300 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold">
@@ -45,14 +45,14 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         {isHomePage && (
-          <nav className="hidden md:flex space-x-6 text-sm font-medium">
+          <nav className="hidden md:flex space-x-12 text-md">
             {sections.map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
-                className={`transition ${activeSection === section
-                  ? 'text-blue-500 dark:text-yellow-400 font-semibold'
-                  : 'hover:text-blue-500 dark:hover:text-yellow-400'
+                className={`uppercase ${activeSection === section
+                  ? 'text-blue-500'
+                  : 'hover:text-sky-400'
                   }`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -77,7 +77,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isHomePage && menuOpen && (
-        <div className="md:hidden bg-gray-300/30 dark:bg-gray-800/10 p-4 text-center">
+        <div className="md:hidden bg-gray-100 dark:bg-gray-950 text-center">
           {sections.map((section, index) => (
             <motion.a
               key={section}
@@ -88,8 +88,8 @@ export default function Navbar() {
               href={`#${section}`}
               onClick={() => setMenuOpen(false)}
               className={`block text-lg font-semibold ${activeSection === section
-                ? 'text-blue-500 dark:text-yellow-400'
-                : 'hover:text-blue-500 dark:hover:text-yellow-400'
+                ? 'text-blue-500'
+                : 'hover:text-sky-400'
                 }`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}

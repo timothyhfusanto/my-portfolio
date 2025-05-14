@@ -22,11 +22,34 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
+      className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
     >
       <div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
-        <h2 className="text-5xl font-bold mb-12">Projects</h2>
-        <div className="relative w-full max-w-7xl min-h-screen flex flex-col">
+        <div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-10'>
+          <motion.div
+            initial={{ opacity: 0, y: -60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+            className='text-left'
+          >
+            <div className="text-lg font-light mb-4">PROJECTS</div>
+
+            <div>
+              <p className="text-6xl uppercase leading-[1]">
+                Turning ideas <br></br>
+                into reality
+              </p>
+            </div>
+          </motion.div>
+          <div className="flex flex-col justify-end text-right mt-5 lg:mt-0">
+            <p className="text-xl font-light uppercase leading-relaxed">
+              Bringing ideas to life through <br />
+              innovative software solutions
+            </p>
+          </div>
+        </div>
+        <div className="relative w-full max-w-7xl min-h-screen flex flex-col text-center">
           {/* Search bar at the top */}
           <div className="relative w-full max-w-xl mx-auto mb-20">
             <Input
@@ -47,7 +70,6 @@ export default function Projects() {
             </div>
           )}
 
-
           {/* Projects grid */}
           <div className="flex-1 px-4">
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
@@ -55,7 +77,7 @@ export default function Projects() {
                 filteredProjects.slice(0, projectsToShow).map((project, index) => (
                   <motion.div
                     key={index}
-                    className="bg-white dark:bg-gray-900 rounded-xl shadow-md text-left border overflow-hidden border-gray-200 dark:border-gray-700"
+                    className="bg-white dark:bg-gray-900 shadow-md text-left border overflow-hidden border-gray-200 dark:border-gray-700"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index < 6 ? index * 0.2 : (index - 6) * 0.2, duration: 0.5 }}
@@ -102,7 +124,7 @@ export default function Projects() {
           <div className="mt-12">
             <Button
               onClick={handleToggle}
-              className="text-md  px-6 py-3 rounded-full"
+              className="text-md bg-blue-500 text-white px-6 py-3 rounded-full"
             >
               {showAll ? ("Show Less") : "Show More"}
               {showAll ? <ChevronUp /> : <ChevronDown />}

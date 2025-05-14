@@ -19,7 +19,7 @@ const SectionCard = ({ title, items }) => (
     className="w-full"
   >
     <Card className="bg-white dark:bg-gray-900 border dark:border-gray-700 shadow-md rounded-2xl py-4 px-6 h-full flex flex-col">
-      <h4 className="text-lg font-semibold">{title}</h4>
+      <h4 className="text-lg text-left font-semibold">{title}</h4>
       <CardContent className="flex flex-wrap gap-4 p-0">
         {items.map((item, index) => (
           <Badge
@@ -47,11 +47,33 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
+      className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
     >
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <h2 className="text-5xl font-bold mb-16 text-center">Skills</h2>
+      <div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
+        <div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-10'>
+          <motion.div
+            initial={{ opacity: 0, y: -60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+            className='text-left'
+          >
+            <div className="text-lg font-light mb-4">SKILLS</div>
 
+            <div>
+              <p className="text-6xl uppercase leading-[1]">
+                Tools that
+                shape solutions
+              </p>
+            </div>
+          </motion.div>
+          <div className="flex flex-col justify-end text-right mt-5 lg:mt-0">
+            <p className="text-xl font-light uppercase leading-relaxed">
+              Blending technical expertise with problem-solving
+              to build robust and user-focused applications.
+            </p>
+          </div>
+        </div>
         <Tabs defaultValue="technical" className="w-full flex flex-col items-center">
           <TabsList className="mb-8 bg-white dark:bg-gray-800 shadow-md">
             <TabsTrigger

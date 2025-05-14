@@ -42,7 +42,7 @@ export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="bg-white dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 px-6 py-20"
+			className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 px-6 py-20"
 		>
 			<div className="max-w-6xl mx-auto w-full min-h-screen flex flex-col">
 				<motion.h2
