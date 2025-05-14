@@ -29,29 +29,44 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0, y: -60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
             viewport={{ once: true }}
             className='text-left'
           >
             <div className="text-lg font-light mb-4">PROJECTS</div>
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: -60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               <p className="text-6xl uppercase leading-[1]">
                 Turning ideas <br></br>
                 into reality
               </p>
-            </div>
+            </motion.div>
           </motion.div>
-          <div className="flex flex-col justify-end text-right mt-5 lg:mt-0">
+          <motion.div
+            initial={{ opacity: 0, y: -60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex flex-col justify-end text-right mt-5 lg:mt-0">
             <p className="text-xl font-light uppercase leading-relaxed">
               Bringing ideas to life through <br />
               innovative software solutions
             </p>
-          </div>
+          </motion.div>
         </div>
         <div className="relative w-full max-w-7xl min-h-screen flex flex-col text-center">
           {/* Search bar at the top */}
-          <div className="relative w-full max-w-xl mx-auto mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: -60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative w-full max-w-xl mx-auto mb-20">
             <Input
               type="text"
               placeholder="Search projects..."
@@ -62,7 +77,7 @@ export default function Projects() {
             <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
               <Search className="w-5 h-5 text-gray-400" />
             </div>
-          </div>
+          </motion.div>
 
           {textQuery && (
             <div className="mb-10 text-lg text-gray-600 dark:text-gray-400">

@@ -16,28 +16,31 @@ export default function Hero() {
 					<div className='text-center md:text-left justify-center flex flex-col items-center md:items-start'>
 						<motion.h1
 							className="text-7xl md:text-9xl font-bold mb-8"
-							initial={{ opacity: 0, y: -40 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6 }}
+							initial={{ opacity: 0, x: -80 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.2, duration: 0.8 }}
 						>
 							Software Engineer
 						</motion.h1>
 
 						<motion.p
 							className="text-lg text-gray-600 dark:text-gray-300 mb-10 uppercase font-light"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.2, duration: 0.6 }}
+							initial={{ opacity: 0, x: -80 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.2, duration: 0.8 }}
 						>
 							I’m Timothy - a student <span className="text-blue-500 font-semibold">software developer</span> & <span className="text-blue-500 font-semibold">product manager</span>  who loves planning and building functional application systems
 						</motion.p>
 
 						<motion.a
 							href="#contact"
-							className="rounded-full transition"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ delay: 0.4 }}
+							className="rounded-full"
+							initial={{ opacity: 0, x: -80 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.2, duration: 0.8 }}
 						>
 							<Button className="bg-blue-500 text-white text-3xl !py-8 !px-8 rounded-full cursor-pointer">
 								Contact Me <ChevronRight className="inline-block" />
@@ -45,9 +48,10 @@ export default function Hero() {
 						</motion.a>
 					</div>
 					<motion.div
-						initial={{ opacity: 0, y: -40 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
+						initial={{ opacity: 0, x: 80 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0.2, duration: 0.8 }}
+						viewport={{ once: true }}
 						className="flex justify-center lg:justify-end lg:ml-4 p-4 mt-10"
 					>
 						<img

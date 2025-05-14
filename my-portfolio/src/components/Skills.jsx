@@ -12,9 +12,9 @@ import { productSkills, techStackAnalytics, techStackBackendFramework, techStack
 
 const SectionCard = ({ title, items }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: -60 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
+    transition={{ delay: 0.4, duration: 0.8 }}
     viewport={{ once: true }}
     className="w-full"
   >
@@ -54,41 +54,59 @@ export default function Skills() {
           <motion.div
             initial={{ opacity: 0, y: -60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
             viewport={{ once: true }}
             className='text-left'
           >
             <div className="text-lg font-light mb-4">SKILLS</div>
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: -60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               <p className="text-6xl uppercase leading-[1]">
                 Tools that
                 shape solutions
               </p>
-            </div>
+            </motion.div>
           </motion.div>
-          <div className="flex flex-col justify-end text-right mt-5 lg:mt-0">
+          <motion.div
+            initial={{ opacity: 0, y: -60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex flex-col justify-end text-right mt-5 lg:mt-0">
             <p className="text-xl font-light uppercase leading-relaxed">
               Blending technical expertise with problem-solving
               to build robust and user-focused applications.
             </p>
-          </div>
+          </motion.div>
         </div>
         <Tabs defaultValue="technical" className="w-full flex flex-col items-center">
-          <TabsList className="mb-8 bg-white dark:bg-gray-800 shadow-md">
-            <TabsTrigger
-              value="technical"
-              className="px-6 py-2 text-lg font-medium  transition-colors data-[state=active]:bg-blue-100 dark:data-[state=active]:bg-blue-900"
-            >
-              Technical
-            </TabsTrigger>
-            <TabsTrigger
-              value="product"
-              className="px-6 py-2 text-lg font-medium  transition-colors data-[state=active]:bg-blue-100 dark:data-[state=active]:bg-blue-900"
-            >
-              Product
-            </TabsTrigger>
-          </TabsList>
+          <motion.div
+            initial={{ opacity: 0, y: -60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <TabsList className="mb-8 bg-white dark:bg-gray-800 shadow-md">
+              <TabsTrigger
+                value="technical"
+                className="px-6 py-2 text-lg font-medium  transition-colors data-[state=active]:bg-blue-100 dark:data-[state=active]:bg-blue-900"
+              >
+                Technical
+              </TabsTrigger>
+              <TabsTrigger
+                value="product"
+                className="px-6 py-2 text-lg font-medium  transition-colors data-[state=active]:bg-blue-100 dark:data-[state=active]:bg-blue-900"
+              >
+                Product
+              </TabsTrigger>
+            </TabsList>
+
+          </motion.div>
 
           {/* Technical Skills Tab */}
           <TabsContent value="technical" className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -22,23 +22,33 @@ export default function About() {
 					<motion.div
 						initial={{ opacity: 0, y: -60 }}
 						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ delay: 0.4, duration: 0.6 }}
+						transition={{ delay: 0.4, duration: 0.8 }}
 						viewport={{ once: true }}
 						className='text-left'
 					>
 						<h2 className="text-lg font-light mb-4">ABOUT ME</h2>
 					</motion.div>
-					<div
+					<motion.div
+						initial={{ opacity: 0, y: -60 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.6, duration: 0.8 }}
+						viewport={{ once: true }}
 						className='text-right'
 					>
 						<p className="text-xl font-extralight leading-relaxed">
 							"I'm a penultimate year student at the National University of Singapore, majoring in Information Systems. I am passionate about exploring the dynamic intersection of technology, business, and innovation.
 							<br /><br />
-							Currently navigating my academic journey at NUS, I am enthusiastic about leveraging my skills in information systems to tackle real-world challenges. Furthermore, I am actively seeking internship opportunities to gain practical experience and contribute to impactful projects."	
+							Currently navigating my academic journey at NUS, I am enthusiastic about leveraging my skills in information systems to tackle real-world challenges. Furthermore, I am actively seeking internship opportunities to gain practical experience and contribute to impactful projects."
 						</p>
-					</div>
+					</motion.div>
 				</div>
-				<div className="flex-1 px-4">
+				<motion.div
+					initial={{ opacity: 0, y: -60 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.6, duration: 0.8 }}
+					viewport={{ once: true }}
+					className="flex-1 px-4"
+				>
 					<Swiper
 						modules={[Autoplay]}
 						slidesPerView={3}
@@ -83,7 +93,7 @@ export default function About() {
 							</SwiperSlide>
 						))}
 					</Swiper>
-				</div>
+				</motion.div>
 
 			</div >
 		</section >

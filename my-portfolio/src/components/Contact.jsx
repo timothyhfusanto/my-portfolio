@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
+import { Card } from '@/components/ui/card';
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
+import { Linkedin, PhoneCall } from 'react-feather';
 
 export default function Contact() {
 	const form = useRef();
@@ -44,91 +47,90 @@ export default function Contact() {
 			id="contact"
 			className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 px-6 py-20"
 		>
-			<div className="max-w-6xl mx-auto w-full min-h-screen flex flex-col">
-				<motion.h2
-					className="text-5xl font-bold text-center mb-12"
-					initial={{ opacity: 0, y: -30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-					viewport={{ once: true }}
-				>
-					Contact Me
-				</motion.h2>
-
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-					{/* Form */}
-					<motion.form
-						ref={form}
-						onSubmit={sendEmail}
-						className="space-y-6"
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.6 }}
-						viewport={{ once: true }}
-					>
-						<div>
-							<label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
-							<input placeholder="Enter your name" type="text" name="name" required className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2" />
-						</div>
-
-						<div>
-							<label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
-							<input placeholder='Enter your email' type="email" name="email" required className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2" />
-						</div>
-
-						<div>
-							<label htmlFor="subject" className="block text-sm font-medium mb-1">Subject</label>
-							<input type="text" name="subject" required className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2"
-								placeholder='Enter email subject' />
-						</div>
-
-						<div>
-							<label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
-							<textarea name="message" rows="5" required className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2"></textarea>
-						</div>
-
-						{ }<button
-							type="submit"
-							className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition"
-						>
-							Send Message
-						</button>
-
-					</motion.form>
-
-					{/* Info */}
+			<div className="mx-auto w-full flex flex-col px-6">
+				<div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-10'>
 					<motion.div
-						className="space-y-6 text-left"
+						initial={{ opacity: 0, y: -60 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.4, duration: 0.8 }}
+						viewport={{ once: true }}
+						className='text-left'
+					>
+						<div className="text-lg font-light mb-4">CONTACT ME</div>
+
+						<motion.div
+							initial={{ opacity: 0, y: -60 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.8, duration: 0.8 }}
+							viewport={{ once: true }}
+						>
+							<p className="text-6xl uppercase leading-[1]">
+								LET'S CONNECT <br></br>
+							</p>
+						</motion.div>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, y: -60 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.8, duration: 0.8 }}
+						viewport={{ once: true }}
+						className="flex flex-col justify-end text-right mt-5 lg:mt-0">
+						<p className="text-xl font-light uppercase leading-relaxed">
+							If you’re looking for someone to bring ideas to life through code and design, I’m ready to help. <br />
+						</p>
+					</motion.div>
+				</div>
+
+				<div className="grid grid-cols-12 w-full justify-between mb-10">
+					{/* Form */}
+					<motion.div
+						className="space-y-6 text-left md:col-span-5 col-span-12 p-4"
 						initial={{ opacity: 0, x: 50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.6 }}
 						viewport={{ once: true }}
 					>
-						<div>
-							<h3 className="text-2xl font-semibold mb-2">Contact Info</h3>
-							<p className="text-gray-600 dark:text-gray-400">Feel free to reach out via email or LinkedIn!</p>
+						<p className="text-2xl uppercase leading-[1]">
+							MY CONTACT INFO
+						</p>
+
+						<div className='justify-end flex flex-col'>
+							<p className="text-sm font-light uppercase leading-relaxed ">
+								Feel free to reach out via email or LinkedIn!
+							</p>
 						</div>
 
-						<div className="space-y-4">
+						<div className="space-y-8">
 							<div>
-								<p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
+								<div className='flex items-center mb-1'>
+									<p className="text-sm flex items-center text-gray-500 dark:text-gray-400"><Mail className='mr-2' size={20} />Email</p>
+								</div>
 								<a href="mailto:timothyfusanto@u.nus.edu" className="text-blue-600 dark:text-blue-400 hover:underline">
 									timothyfusanto@u.nus.edu
 								</a>
 							</div>
 
 							<div>
-								<p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-								<p>+65 9053 0168</p>
+								<div className='flex items-center mb-1'>
+									<p className="text-sm flex items-center text-gray-500 dark:text-gray-400"><Phone className='mr-2' size={20} />Call Me</p>
+								</div>
+								<p>
+									+65 9053 0168
+								</p>
 							</div>
 
 							<div>
-								<p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
+								<div className='flex items-center mb-1'>
+									<p className="text-sm flex text-gray-500 dark:text-gray-400"><MapPin className='mr-2' size={20} /> Location</p>
+								</div>
 								<p>Singapore</p>
 							</div>
 
 							<div>
-								<p className="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
+								<div className='flex items-center mb-1'>
+									<p className="text-sm flex text-gray-500 dark:text-gray-400"><Linkedin className='mr-2' size={20} />LinkedIn</p>
+								</div>
 								<a
 									href="https://linkedin.com/in/timothy-fusanto"
 									target="_blank"
@@ -139,12 +141,85 @@ export default function Contact() {
 								</a>
 							</div>
 						</div>
+
 					</motion.div>
+					<motion.form
+						ref={form}
+						onSubmit={sendEmail}
+						initial={{ opacity: 0, x: -50 }}
+						className="w-full flex flex-col gap-6 md:col-span-7 col-span-12"
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.6 }}
+						viewport={{ once: true }}
+					>
+						<div className="p-4">
+							<div className="grid md:grid-cols-2 gap-6 mb-6">
+								<div>
+									<label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
+									<input
+										placeholder="e.g. John Smith"
+										type="text"
+										name="name"
+										required
+										className="w-full border-b-2 outline-none py-2 px-4 transition-colors focus:border-blue-500"
+									/>
+								</div>
+								<div>
+									<label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
+									<input
+										placeholder="e.g. example@gmail.com"
+										type="email"
+										name="email"
+										required
+										className="w-full border-b-2 outline-none py-2 px-4 transition-colors focus:border-blue-500"
+									/>
+								</div>
+
+							</div>
+
+							<div className="grid grid-cols-1 mb-6">
+								<label htmlFor="subject" className="block text-smfont-medium mb-1">Subject</label>
+								<input
+									type="text"
+									name="subject"
+									required
+									placeholder="e.g. Inquiry about your portfolio"
+									className="w-full border-b-2 outline-none py-2 px-4 transition-colors focus:border-blue-500"
+								/>
+							</div>
+
+							<div className="mb-6">
+								<label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
+								<textarea
+									name="message"
+									rows="6"
+									required
+									placeholder="Write your message here..."
+									className="w-full rounded-md border  px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none resize-none"
+								/>
+							</div>
+
+							<div className='flex w-full'>
+								<div className="flex justify-between">
+									<button
+										type="submit"
+										className="flex items-center gap-2 cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-semibold text-lg py-2 px-8 rounded-lg transition w-full sm:w-fit"
+									>
+										Send Message
+										<ArrowRight size={20} />
+									</button>
+								</div>
+
+							</div>
+						</div>
+					</motion.form>
 				</div>
-			</div>
+
+
+			</div >
 			<div className="mt-20 text-center text-sm text-gray-500 dark:text-gray-400">
 				© {new Date().getFullYear()} Timothy Fusanto. All rights reserved.
 			</div>
-		</section>
+		</section >
 	);
 }

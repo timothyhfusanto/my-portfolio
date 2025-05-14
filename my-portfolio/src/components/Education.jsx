@@ -32,23 +32,28 @@ export default function Education() {
 					<motion.div
 						initial={{ opacity: 0, y: -60 }}
 						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ delay: 0.4, duration: 0.6 }}
+						transition={{ delay: 0.4, duration: 0.8 }}
 						viewport={{ once: true }}
 						className='text-left p-4 mb-4'
 					>
 						<h2 className="text-lg font-light mb-6">EDUCATION</h2>
-						<div className='uppercase text-5xl lg:text-8xl'>
+						<motion.div
+							initial={{ opacity: 0, y: -60 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.6, duration: 0.8 }}
+							viewport={{ once: true }}
+							className='uppercase text-5xl lg:text-8xl'>
 							Top University in Asia
-						</div>
+						</motion.div>
 					</motion.div>
 					<div className="relative border-l-2 border-gray-300 dark:border-gray-700 ml-4">
 						{schools.map((school, index) => (
 							<motion.div
 								key={index}
 								className="relative mb-16 pl-8 ml-8"
-								initial={{ opacity: 0, y: 30 }}
+								initial={{ opacity: 0, y: 60 }}
 								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ delay: index * 0.2, duration: 0.5 }}
+								transition={{ delay: index * 0.4, duration: 0.8 }}
 								viewport={{ once: true }}
 							>
 								{/* Dot marker */}
