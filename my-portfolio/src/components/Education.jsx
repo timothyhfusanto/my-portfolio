@@ -34,7 +34,7 @@ export default function Education() {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.4, duration: 0.6 }}
 						viewport={{ once: true }}
-						className='text-left p-4'
+						className='text-left p-4 mb-4'
 					>
 						<h2 className="text-lg font-light mb-6">EDUCATION</h2>
 						<div className='uppercase text-5xl lg:text-8xl'>

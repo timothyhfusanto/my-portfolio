@@ -31,7 +31,7 @@ export default function About() {
 					<div
 						className='text-right'
 					>
-						<p className="text-xl font-semibold leading-relaxed">
+						<p className="text-xl font-extralight leading-relaxed">
 							"I'm a penultimate year student at the National University of Singapore, majoring in Information Systems. I am passionate about exploring the dynamic intersection of technology, business, and innovation.
 							<br /><br />
 							Currently navigating my academic journey at NUS, I am enthusiastic about leveraging my skills in information systems to tackle real-world challenges. Furthermore, I am actively seeking internship opportunities to gain practical experience and contribute to impactful projects."	
