@@ -57,7 +57,7 @@ export default function Hero() {
 						<img
 							src={profileImg}
 							alt="Timothy"
-							className="lg:h-screen h-[70vh] object-cover rounded-xl"
+							className="lg:h-screen h-[50vh] object-cover rounded-3xl"
 						/>
 					</motion.div>
 				</div>

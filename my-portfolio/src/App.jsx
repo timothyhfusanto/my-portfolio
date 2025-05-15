@@ -17,17 +17,20 @@ function App() {
       <Toaster position="top-center" reverseOrder={false} />
       <Router>
         <Navbar />
-        <main className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
+        <main className="bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-white min-h-screen">
           <Routes>
             {/* 🏠 Main Homepage */}
             <Route path="/" element={
               <>
-                <Hero />
-                <About />
-                <Education />
-                <Projects />
-                <Skills />
-                <Contact />
+                <div className='container mx-auto'>
+                  <Hero />
+                  <About />
+                  <Education />
+                  <Projects />
+                  <Skills />
+                  <Contact />
+                </div>
+
               </>
             } />
 
