@@ -15,7 +15,7 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-white transition-colors duration-300 p-6"
+			className="transition-colors duration-300 p-6"
 		>
 			<div className="mx-auto flex flex-col w-full min-h-screen px-6 py-16 text-center">
 				<div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-20'>

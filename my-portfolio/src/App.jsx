@@ -17,7 +17,7 @@ function App() {
       <Toaster position="top-center" reverseOrder={false} />
       <Router>
         <Navbar />
-        <main className="bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-white min-h-screen">
+        <main className="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-white min-h-screen">
           <Routes>
             {/* 🏠 Main Homepage */}
             <Route path="/" element={

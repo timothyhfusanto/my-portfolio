@@ -18,7 +18,7 @@ const SectionCard = ({ title, items }) => (
     viewport={{ once: true }}
     className="w-full"
   >
-    <Card className="bg-white dark:bg-gray-900 border dark:border-gray-700 shadow-md rounded-2xl py-4 px-6 h-full flex flex-col">
+    <Card className="shadow-md rounded-2xl py-4 px-6 h-full flex flex-col">
       <h4 className="text-lg text-left font-semibold">{title}</h4>
       <CardContent className="flex flex-wrap gap-4 p-0">
         {items.map((item, index) => (

@@ -25,7 +25,7 @@ export default function Education() {
 	return (
 		<section
 			id="education"
-			className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
+			className="transition-colors duration-300 py-20 px-6"
 		>
 			<div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
 				<div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-30'>

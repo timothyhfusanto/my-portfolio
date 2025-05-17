@@ -32,7 +32,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="dark:bg-gray-950 bg-gray-50 text-gray-900 dark:text-white duration-300 fixed w-full top-0 z-50">
+    <header className="duration-300 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold">

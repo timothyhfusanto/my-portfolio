@@ -22,7 +22,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
+      className="transition-colors duration-300 py-20 px-6"
     >
       <div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
         <div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-10'>
@@ -67,10 +67,10 @@ export default function Projects() {
             transition={{ delay: 0.8, duration: 0.8 }}
             viewport={{ once: true }}
             className="relative w-full max-w-xl mx-auto mb-20">
-            <Input
+            <input
               type="text"
               placeholder="Search projects..."
-              className="pl-12 py-5 rounded-full shadow-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+              className="w-full pl-12 py-3 border-b-2 focus:border-blue-500 outline-none" 
               value={textQuery}
               onChange={(e) => setTextQuery(e.target.value)}
             />

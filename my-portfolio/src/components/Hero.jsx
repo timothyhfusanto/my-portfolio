@@ -9,11 +9,11 @@ export default function Hero() {
 	return (
 		<section
 			id='home'
-			className="dark:bg-gray-950 bg-gray-50 text-gray-900 dark:text-white transition-colors duration-300 p-6"
+			className="transition-colors duration-300 p-4"
 		>
 			<div className="mx-auto flex flex-col items-center justify-center w-full min-h-screen px-6 py-16 lg:py-0 text-center">
 				<div className="grid grid-cols-1 lg:grid-cols-2 w-full p-4">
-					<div className='text-center md:text-left justify-center flex flex-col items-center md:items-start'>
+					<div className='text-center lg:text-left justify-center flex flex-col items-center lg:items-start'>
 						<motion.h1
 							className="text-7xl md:text-9xl font-bold mb-8"
 							initial={{ opacity: 0, x: -80 }}
@@ -57,7 +57,7 @@ export default function Hero() {
 						<img
 							src={profileImg}
 							alt="Timothy"
-							className="lg:h-screen h-[50vh] object-cover rounded-3xl"
+							className="lg:h-screen h-[50vh] object-cover rounded-xl"
 						/>
 					</motion.div>
 				</div>
