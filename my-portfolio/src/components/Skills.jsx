@@ -18,7 +18,7 @@ const SectionCard = ({ title, items }) => (
     viewport={{ once: true }}
     className="w-full"
   >
-    <Card className="shadow-md rounded-2xl py-4 px-6 h-full flex flex-col">
+    <Card className="bg-white dark:bg-gray-900 border dark:border-gray-700 shadow-md rounded-2xl py-4 px-6 h-full flex flex-col">
       <h4 className="text-lg text-left font-semibold">{title}</h4>
       <CardContent className="flex flex-wrap gap-4 p-0">
         {items.map((item, index) => (
@@ -47,7 +47,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300 py-20 px-6"
+      className="transition-colors duration-300 py-20 px-6"
     >
       <div className="mx-auto text-center w-full min-h-screen px-6 justify-center items-center flex flex-col">
         <div className='grid grid-cols-1 lg:grid-cols-2 w-full p-4 justify-between mb-10'>

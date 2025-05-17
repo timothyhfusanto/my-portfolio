@@ -18,7 +18,7 @@ export default function LiveSiteNotice() {
       </div>
       <button
         onClick={() => setShowAlert(false)}
-        className="ml-4 mt-0.5 text-yellow-800 dark:text-yellow-200 hover:text-red-500"
+        className="ml-4 cursor-pointer mt-0.5 text-yellow-800 dark:text-yellow-200 hover:text-red-500"
         aria-label="Dismiss alert"
       >
         <X className="w-4 h-4" />

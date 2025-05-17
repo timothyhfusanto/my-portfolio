@@ -139,7 +139,7 @@ export default function Projects() {
           <div className="mt-12">
             <Button
               onClick={handleToggle}
-              className="text-md bg-blue-500 text-white px-6 py-3 rounded-full"
+              className="text-md bg-blue-500 text-white px-6 py-3 rounded-full cursor-pointer"
             >
               {showAll ? ("Show Less") : "Show More"}
               {showAll ? <ChevronUp /> : <ChevronDown />}

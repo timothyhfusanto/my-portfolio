@@ -64,7 +64,7 @@ export default function Navbar() {
         {/* Mobile Toggle Button */}
         {isHomePage && (
           <button
-            className="md:hidden text-gray-800 dark:text-white"
+            className="md:hidden text-gray-800 dark:text-white cursor-pointer"
             onClick={toggleMenu}
             aria-label="Toggle navigation"
           >
