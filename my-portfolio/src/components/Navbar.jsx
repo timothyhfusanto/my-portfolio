@@ -32,7 +32,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="duration-300 fixed w-full top-0 z-50">
+    <header className="bg-gray-50 dark:bg-gray-950 duration-300 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold">
@@ -77,7 +77,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isHomePage && menuOpen && (
-        <div className="md:hidden bg-gray-100 dark:bg-gray-950 text-center">
+        <div className="md:hidden bg-gray-100 dark:bg-gray-950 p-4 text-center">
           {sections.map((section, index) => (
             <motion.a
               key={section}
