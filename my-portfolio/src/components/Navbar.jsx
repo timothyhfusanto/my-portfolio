@@ -50,7 +50,7 @@ export default function Navbar() {
               <a
                 key={section}
                 href={`#${section}`}
-                className={`uppercase ${activeSection === section
+                className={`${activeSection === section
                   ? 'text-blue-500'
                   : 'hover:text-sky-400'
                   }`}
@@ -87,7 +87,7 @@ export default function Navbar() {
               viewport={{ once: true }}
               href={`#${section}`}
               onClick={() => setMenuOpen(false)}
-              className={`block text-lg font-semibold ${activeSection === section
+              className={`block text-md ${activeSection === section
                 ? 'text-blue-500'
                 : 'hover:text-sky-400'
                 }`}
