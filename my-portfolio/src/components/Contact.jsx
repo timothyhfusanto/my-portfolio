@@ -77,7 +77,7 @@ export default function Contact() {
 						viewport={{ once: true }}
 						className="flex flex-col justify-end text-right mt-5 lg:mt-0">
 						<p className="text-xl font-light uppercase leading-relaxed">
-							If you’re looking for someone to bring ideas to life through code and design, I’m ready to help. <br />
+							Looking to build a website? <br/> I’m here to help bring your vision to life. <br />
 						</p>
 					</motion.div>
 				</div>
