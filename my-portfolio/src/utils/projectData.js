@@ -121,7 +121,13 @@ const notSorted = [
 		},
 		details: "/project/skillswap",
 		keyFeatures: [
-
+			"Marketplace for freelancers to offer services and trade skills.",
+			"Service listing and portfolio management for freelancers.",
+			"Booking system for direct orders from users.",
+			"Skill-swapping feature for freelancers to exchange services.",
+			"Review system for users to provide feedback on services.",
+			"User-friendly interface for seamless navigation.",
+			"Responsive design for optimal viewing on various devices.",
 		],
 		date: "Feb - Apr 2024",
 		category: "web / full-stack",
@@ -180,7 +186,16 @@ const notSorted = [
 		},
 		details: "/project/ovalevolution",
 		keyFeatures: [
-
+			"Online menu ordering system for restaurants.",
+			"Order management and tracking for restaurant staff.",
+			"Payment processing integration with PayPal API.",
+			"Customer feedback collection for service improvement.",
+			"User-friendly interface for easy navigation.",
+			"Real-time order updates for customers and staff.",
+			"Responsive design for optimal viewing on various devices.",
+			"Customizable menu options for restaurants.",
+			"Secure user authentication and data protection.",
+			
 		],
 		date: "May - Aug 2023",
 		category: "web / full-stack",
@@ -216,7 +231,15 @@ const notSorted = [
 		},
 		details: "/project/smartfurnituresg",
 		keyFeatures: [
-
+			"Designed and architected a comprehensive system design for a furniture e-commerce platform.",
+			"Developed UML diagrams including use case, class, and sequence diagrams to visualize system interactions.",
+			"Created an entity-relationship diagram (ERD) to define the database structure and relationships.",
+			"Documented business requirements for each application feature to ensure clarity and alignment.",
+			"Prioritized features based on user needs and business goals to guide development.",
+			"Designed wireframes and UI/UX elements to enhance user experience and interface design.",
+			"Utilized Figma for collaborative design and prototyping, enabling real-time feedback and iteration.",
+			"Conducted requirement analysis to identify key functionalities and user stories for the application.",
+			"Created a product development roadmap to outline the timeline and milestones for feature implementation.",
 		],
 		date: "Aug - Nov 2023",
 		category: "Product / System Design",
