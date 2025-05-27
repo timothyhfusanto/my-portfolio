@@ -113,15 +113,6 @@ export default function Contact() {
 
 							<div>
 								<div className='flex items-center mb-1'>
-									<p className="text-sm flex items-center text-gray-500 dark:text-gray-400"><Phone className='mr-2' size={20} />Call Me</p>
-								</div>
-								<p>
-									+65 9053 0168
-								</p>
-							</div>
-
-							<div>
-								<div className='flex items-center mb-1'>
 									<p className="text-sm flex text-gray-500 dark:text-gray-400"><MapPin className='mr-2' size={20} /> Location</p>
 								</div>
 								<p>Singapore</p>
