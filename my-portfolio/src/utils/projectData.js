@@ -21,8 +21,42 @@ import shelfserveImg from "../assets/shelfserve/shelfserve1.png";
 import shelfserveImg2 from "../assets/shelfserve/shelfserve2.png";
 import timchatImg from "../assets/timchat/timchat1.png";
 import cloudinaryImg from "../assets/tech-logo/cloudinary.svg";
+import cssh1 from '../assets/cssh/cssh1.png';
 
 const notSorted = [
+	{
+		id: "cssh",
+		name: "CSSH Symposium",
+		type: "frontendapp",
+		images: [
+			cssh1,
+		],
+		description: "Conference Website",
+		fullDescription: "Website design and development",
+		stack: [
+			{ name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" },
+			{ name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+			{ name: "Shadcn UI", logo: "https://avatars.githubusercontent.com/u/139895814?s=200&v=4" }
+		],
+		details: "/project/cssh",
+		date: "May - Present",
+		category: "Frontend Development",
+		link: {
+			github: "",
+			report: "",
+			slides: ""
+		},
+		sites: [
+			{ name: "CSSH", link: "https://csshworkshop.vercel.app/" },
+		],
+		keyFeatures: [
+			"Developed a responsive conference website using Next.js and Tailwind CSS.",
+			"Implemented Shadcn UI for a modern and user-friendly interface.",
+			"Ensured cross-browser compatibility and optimized performance.",
+			"Integrated dynamic content management for event details and schedules.",
+			"Designed with accessibility in mind to cater to all users."
+		]
+	},
 	{
 		id: "chio",
 		name: "Chio",
@@ -195,7 +229,7 @@ const notSorted = [
 			"Responsive design for optimal viewing on various devices.",
 			"Customizable menu options for restaurants.",
 			"Secure user authentication and data protection.",
-			
+
 		],
 		date: "May - Aug 2023",
 		category: "web / full-stack",
@@ -273,7 +307,7 @@ const notSorted = [
 			"Built an admin portal for airline staff to manage flight schedules, aircraft types, and seat configurations.",
 			"Supported booking for both returning and direct flights across multiple airlines.",
 			"Integrated seat selection functionality during the booking process for an enhanced user experience.",
-		  ],
+		],
 		date: "Aug - Nov 2023",
 		category: "Backend Development",
 		sites: [

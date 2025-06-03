@@ -112,7 +112,9 @@ export default function ProjectDetails() {
             viewport={{ once: true }}
             className='mb-2'
           >
-            <LiveSiteNotice />
+            {project.type === "app" && 
+              <LiveSiteNotice />
+            }
 
           </motion.div>
         )}
